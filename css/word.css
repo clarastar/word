@@ -1,0 +1,189 @@
+*{
+	padding:0;
+	margin:0;
+	list-style: none;
+	text-decoration: none;
+	outline:none;
+	border:none;
+	/*font:0.625rem normal arial;
+	color:#333;*/
+	/*box-sizing: border-box;*/
+}
+body{
+	background:#ffe;
+}
+/**页面导航***/
+.container{
+	width:90%;
+	/*border:1px solid #333;*/
+	margin:25px auto;
+	text-align: center;
+}
+.nav-bar{
+	width:80%;
+	margin:0 auto;
+	border:3px solid #ffcc99;
+	background:#ffe;
+}
+.nav-bar li{
+	display:inline-block;
+	padding:6px 15px;
+	width:13%;
+}
+
+
+/***页面导航 登陆模态框**/
+.modal{
+	position:fixed;
+	left:0;
+	top:0;
+	right:0;
+	bottom:0;
+	background: rgba(51,153,255,0.5);
+	display: none;
+}
+.modal-dialog{
+	width:500px;
+	height:800px; /**????***/
+	margin:200px auto;
+}
+.modal-content{
+	background:#ffe;
+	padding:8px;
+	border-radius:5px;
+	font-size:20px; /**字体大小会影响元素的排列***/
+}
+.modal-content>span{
+	width:80px;
+	text-align:right;
+	border:1px solid #ddd;
+	display: inline-block;
+	height:25px;
+	margin:10px;
+}
+.modal-content .inp{
+	background: #eee;
+	border:1px solid #ff9933;
+	margin:6px;
+	width:150px;
+	height:15px;
+	padding:6px 10px;
+}
+.btnReg,.btnLog{
+	background:#ff9933;
+	width:80px;
+	height:25px;
+	color:#fff;
+	font:20px solid 'arial';
+	border-radius: 3px;
+	margin:10px;
+}
+
+
+
+/***页面主体****/
+.container>h2{
+	text-align:center;
+	font-size:35px;
+	font-weight: bold;
+	padding:15px;
+}
+.fa{
+	color:#ff9933;
+}
+.w-audio{
+	display:none;
+}
+
+.word{
+	padding:6px 15px;
+	margin:0 auto;
+	width:80%;
+}
+.word>li{
+	display:inline-block;
+	border-radius: 5px;
+	cursor:pointer;
+}
+.word>li>a{
+	font-size: 28px;
+	background:#ff9933;
+	color:#fff;
+	padding:6px 15px;
+}
+.img-box{
+	height:450px;
+	width:80%;
+	border:3px solid #ffcc99;
+	border-top: none;
+	text-align: center;
+	margin:0 auto;
+	background:#ffe;
+}
+img{
+	height:200px;
+	border:2px solid #ffcc99;
+	margin:8px;
+}
+
+
+/**计算机中的英文Computer Jargon**/
+.cword{
+	width:80%;
+	margin:0 auto;
+	border:2px solid #ffcc99;
+	border-top: none;
+	background:#ffffee;
+	padding:20px 10px;
+}
+.cword>li{
+	margin:10px 20px;
+	display: inline-block;
+}
+.cword>li>span{
+	display: inline-block;
+	border-radius: 5px;
+	padding:3px 5px;
+	font-size: 10px;
+	color:#333;
+	margin-right: 15px;
+	background:#fff;
+}
+.cword>li>a{
+	font-size: 20px;
+	border-radius: 5px;
+	color:#333;
+	padding:6px 15px;
+	background:#ffcc66;
+}
+.cword>li>a:hover{
+	background:#ff9933;
+	color:#fff;
+}
+
+
+/**页脚***/
+
+.save,.next{
+	width:15%;
+	height:50px;
+	background:#ff9933;
+	color:#fff;
+	border-radius: 5px;
+	font-size:25px;
+	font-weight: bold;
+	padding:6px 10px;
+	cursor:pointer;
+}
+.next{
+	margin-left: 30%;
+}
+.save:hover,.next:hover{
+	/*border:5px solid #ff6633;button 是默认为border-box的*/
+	/*outline:5px solid #ff6633; 形状不受border-radius的影响 还是方形的*/
+	box-shadow: 0 0 3px #ff9933;
+}
+
+
+
+
