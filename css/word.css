@@ -5,8 +5,7 @@
 	text-decoration: none;
 	outline:none;
 	border:none;
-	/*font:0.625rem normal arial;
-	color:#333;*/
+	/*font:0.625rem normal arial;*/
 	/*box-sizing: border-box;*/
 }
 body{
@@ -22,15 +21,25 @@ body{
 .nav-bar{
 	width:80%;
 	margin:0 auto;
-	border:3px solid #ffcc99;
-	background:#ffe;
+	/*border:3px solid #ffcc99;*/
+	background:#ff9933;
+	border-radius:5px;
 }
 .nav-bar li{
 	display:inline-block;
 	padding:6px 15px;
 	width:13%;
+	border:2px solid #ffffff;
 }
 
+.nav-bar li a{
+	color:#fff;
+	font-size:20px;
+}
+
+.nav-bar li:hover{
+	border:none;
+}
 
 /***页面导航 登陆模态框**/
 .modal{
@@ -114,11 +123,11 @@ body{
 .img-box{
 	height:450px;
 	width:80%;
-	border:3px solid #ffcc99;
+	/*border:3px solid #ffcc99;*/
 	border-top: none;
 	text-align: center;
 	margin:0 auto;
-	background:#ffe;
+	/*background:#ffe;*/
 }
 img{
 	height:200px;
@@ -131,7 +140,7 @@ img{
 .cword{
 	width:80%;
 	margin:0 auto;
-	border:2px solid #ffcc99;
+	/*border:2px solid #ffcc99;*/
 	border-top: none;
 	background:#ffffee;
 	padding:20px 10px;
