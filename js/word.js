@@ -14,8 +14,11 @@ btReg.onclick=function(){
 btnReg.onclick=function(){
 	$('#modalRegister').css({display:'none'});
 }
-
-
+// $(".nav-bar li").mouseenter(
+// 	function(){
+// 		$(this).css({border:"2px solid #ffffff"});
+// 	}
+// );
 
 
 
@@ -24,12 +27,12 @@ btnReg.onclick=function(){
 $('#wordMain').on('mouseenter','a',function(){
 		$(this).css({background:'#fff',color:'#ff9933'});
 		var n=$(this).attr('href');
-		$(`.img-box [alt=${n}]`).css({filter:'drop-shadow(5px 6px 10px #ff9933)'});
+		$(`.img-box [alt=${n}]`).css({transform:"scale(1.1,1.1)"});
 });
 $('#wordMain').on('mouseout','a',function(){
 		$(this).css({background:'#ff9933',color:'#fff'});
 		var n=$(this).attr('href');
-		$(`.img-box [alt=${n}]`).css({filter:'none'});
+		$(`.img-box [alt=${n}]`).css({transform:"scale(1,1)"});
 });
 
 $('#wordMain').on('click','a',function(e){
