@@ -62,6 +62,7 @@
 			color:rgb(25,89,15);
 			border:none;
 			margin:17px;
+			text-align:center;
 		}
 		.info-box>li.sub{
 			text-align:center;
@@ -97,13 +98,14 @@
 			<ul class="info-box">
 				<li><h2>1.单词名称：</h2><input autofocus name="wordName"></li>
 				<li><h2>2.单词发音：</h2>
-					<ul class="subinfo-box">
-						<li><span>美式音标：</span><input name="wordPhonetic"></li>
-						<li><span>上传发音文件：</span><input name="wordPronoun" type="file"></li>
-					</ul>
-					<ul id="addPro1" class="subinfo-box">
-					</ul>
-					<button class="add" id="addProBtn">添加英式</button>
+					<div id="subInfoContainer0">
+						<ul class="subinfo-box">
+							<li><span>美式音标：</span><input name="wordPhonetic"></li>
+							<li><span>上传发音文件：</span><input name="wordPronoun" type="file"></li>
+						</ul>
+					</div>
+					<div class="add" id="addProBtn">添加英式</div>
+
 				</li>
 				<li><h2>3.单词意思：</h2>
 					<div id="subInfoContainer">
@@ -112,9 +114,7 @@
 							<li><span>上传图片：</span><input name="wordImg" type="file"></li>
 						</ul>
 					</div>
-
-
-					<button class="add add-m" id="addMeanBtn">添加意思</button>
+					<div class="add add-m" id="addMeanBtn">添加意思</div>
 				</li>
 				<li><h2>4.单词级别：</h2>
 					level1<input name="wordLevel" type="radio" value="level1">
@@ -133,27 +133,34 @@
 	<script src="js/jquery-1.11.3.js">
 	</script>
 	<script>
-		$("#addProBtn").mouseenter(function(){
-			$("#addPro1").html(
-					`<li><span>英式音标：</span>
-						<input name="wordPhonetic">
-					</li>
-					<li><span>上传发音文件：</span>
-						<input name="wordPronoun" type="file">
-					</li>`
+		$("#addProBtn").click(function(){
+			$("#subInfoContainer0").append(
+					`<ul class="subinfo-box">
+						<li><span>英式音标：</span>
+							<input name="wordPhonetic">
+						</li>
+						<li><span>上传发音文件：</span>
+							<input name="wordPronoun" type="file"><b class="cancelBtn">&times</b>
+						</li>
+					</ul>`
 				);
 		});
 		var i=1;
-		$("#addMeanBtn").mouseenter(function(){
+		$("#addMeanBtn").click(function(){
 			i++;
 			$("#subInfoContainer").append(
 						`<ul class="subinfo-box">
 							<li><span>意思${i}：</span><input name="wordMean"></li>
-							<li><span>上传图片：</span><input name="wordImg" type="file"></li>
+							<li><span>上传图片：</span><input name="wordImg" type="file"><b class="cancelBtn">&times</b></li>
 						</ul>`
 			);
 		});
 
+		$(".info-box").on("click",".cancelBtn",
+				function(){
+					$(this).parent().parent().remove();
+				}
+		);
 
 		$("#subBtn").click(
 				function(){
