@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>文件上传静态页面</title>
+	<style>
+		*{
+			padding:none;
+			margin:none;
+			list-style: none;
+			color:#333;
+			outline:none;
+			font-size:25px;
+		}
+		h1{
+			width:50%;
+			padding:10px;
+			margin:0 auto;
+			text-align:center;
+		}
+		.container{
+			width:80%;
+			margin:30px auto;
+		}
+		.info-box{
+			background:rgb(242,237,220);
+			padding:30px;
+			border-radius: 5px;
+		}
+		.info-box>li{
+			background:rgb(185,191,10);
+			margin:15px;
+			padding:3px 10px;
+			border-radius:5px;
+		}
+		h2{
+			display:inline-block;
+		}
+		input{
+			width:300px;
+			height:25px;
+			padding:6px 10px;
+			font-size:25px;
+			border-radius: 5px;
+			margin:10px 5px;
+		}
+		.subinfo-box{
+			background:rgb(242,237,220);
+			margin:15px;
+			border-radius:5px;
+		}
+		.subinfo-box>li{
+			display:inline-block;
+		}
+		.add{
+			width:150px;
+			height:35px;
+			font-size:23px;
+			border-radius:5px;
+			padding:5px;
+			background:#fff;
+			color:rgb(25,89,15);
+			border:none;
+			margin:17px;
+		}
+		.info-box>li.sub{
+			text-align:center;
+			background-color:rgb(242,237,220);
+		}
+		[name="wordLevel"]{
+			width:100px;
+		}
+		[type="file"]{
+			background:rgb(185,191,10);
+			border-radius:3px;
+			color:#fff;
+			font-size:18px;
+			border:none;
+		}
+		#subBtn{
+			width:200px;
+			height:50px;
+			padding:5px;
+			font-size:25px;
+			border-radius: 5px;
+			margin:30px;
+			color:#fff;	
+			background:rgb(25,89,15);
+			border:none;	
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+			<h1>Com背词信息上传系统</h1>
+		<form action=""  id="minfo" method="post">
+			<ul class="info-box">
+				<li><h2>1.单词名称：</h2><input autofocus name="wordName"></li>
+				<li><h2>2.单词发音：</h2>
+					<ul class="subinfo-box">
+						<li><span>美式音标：</span><input name="wordPhonetic1"></li>
+						<li><span>上传发音文件：</span><input name="wordPronoun1" type="file"></li>
+					</ul>
+					<ul id="addPro1" class="subinfo-box">
+					</ul>
+					<button class="add" id="addProBtn">添加英式</button>
+				</li>
+				<li><h2>3.单词意思：</h2>
+					<ul class="subinfo-box">
+						<li><span>意思1：</span><input name="wordMean1"></li>
+						<li><span>上传图片：</span><input name="wordImg1" type="file"></li>
+					</ul>
+					<ul class="subinfo-box">
+						<li><span>意思2：</span><input name="wordMean2"></li>
+						<li><span>上传图片：</span><input name="wordImg2" type="file"></li>
+					</ul>
+					<ul class="subinfo-box">
+						<li><span>意思3：</span><input name="wordMean3"></li>
+						<li><span>上传图片：</span><input name="wordImg3" type="file"></li>
+					</ul>
+					<ul class="subinfo-box" id="addMean4">
+					</ul>
+					<button class="add add-m" id="addMeanBtn">添加意思</button>
+				</li>
+				<li><h2>4.单词级别：</h2>
+					level1<input name="wordLevel" type="radio" value="level1">
+					level2<input name="wordLevel" type="radio" value="level2">
+					level3<input name="wordLevel" type="radio" value="level3">
+				</li>
+
+				<li class="sub"><button id="subBtn">保存提交</button></li>
+
+			</ul>
+		</form>
+
+
+	</div>
+
+	<script src="js/jquery-1.11.3.js">
+	</script>
+	<script>
+		$("#addProBtn").mouseenter(function(){
+			$("#addPro1").html(
+					`<li><span>英式音标：</span>
+						<input name="wordPhonetic2">
+					</li>
+					<li><span>上传发音文件：</span>
+						<input name="wordPronoun2" type="file">
+					</li>`
+				);
+		});
+		$("#addMeanBtn").mouseenter(function(){
+			$("#addMean4").html(`
+						<li><span>意思4：</span><input name="wordMean4"></li>
+						<li><span>上传图片：</span><input name="wordImg4" type="file"></li>
+				`);
+		});
+
+
+		$("#subBtn").click(
+				function(){
+					var fd = new FormData(document.getElementById("minfo"));
+					$.ajax({
+						url:"clara.php",
+						type:"post",
+						data:fd,
+						processData:false,
+						contentType:false,
+						success:function(){
+							console.log("success..");
+							$(this).css({background:"#f00"});
+							$(this).html("保存成功");
+						}
+					});
+
+				}
+		);
+
+	</script>
+	
+</body>
+</html>
