@@ -9,7 +9,7 @@
 	/*box-sizing: border-box;*/
 }
 body{
-	background:#ffe;
+	background:#fff;
 }
 /**页面导航***/
 .container{
@@ -91,6 +91,11 @@ body{
 
 
 /***页面主体****/
+.word-info-box{
+	background:#ffe;
+	width:70%;
+	margin:0 auto;
+}
 .container>h2{
 	text-align:center;
 	font-size:35px;
@@ -107,7 +112,7 @@ body{
 .word{
 	padding:6px 15px;
 	margin:0 auto;
-	width:80%;
+	width:90%;
 }
 .word>li{
 	display:inline-block;
@@ -134,7 +139,6 @@ img{
 	border:2px solid #ffcc99;
 	margin:8px;
 }
-
 
 /**计算机中的英文Computer Jargon**/
 .cword{
