@@ -93,7 +93,7 @@
 <body>
 	<div class="container">
 			<h1>Com背词信息上传系统</h1>
-		<form action=""  id="minfo" method="post">
+		<form action=""  id="minfo">
 			<ul class="info-box">
 				<li><h2>1.单词名称：</h2><input autofocus name="wordName"></li>
 				<li><h2>2.单词发音：</h2>
@@ -162,7 +162,7 @@
 					var fd = new FormData(document.getElementById("minfo"));
 					$.ajax({
 						url:"clara.php",
-						type:"post",
+						method:"post",
 						data:fd,
 						processData:false,
 						contentType:false,
