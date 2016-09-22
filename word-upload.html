@@ -98,28 +98,22 @@
 				<li><h2>1.单词名称：</h2><input autofocus name="wordName"></li>
 				<li><h2>2.单词发音：</h2>
 					<ul class="subinfo-box">
-						<li><span>美式音标：</span><input name="wordPhonetic1"></li>
-						<li><span>上传发音文件：</span><input name="wordPronoun1" type="file"></li>
+						<li><span>美式音标：</span><input name="wordPhonetic"></li>
+						<li><span>上传发音文件：</span><input name="wordPronoun" type="file"></li>
 					</ul>
 					<ul id="addPro1" class="subinfo-box">
 					</ul>
 					<button class="add" id="addProBtn">添加英式</button>
 				</li>
 				<li><h2>3.单词意思：</h2>
-					<ul class="subinfo-box">
-						<li><span>意思1：</span><input name="wordMean1"></li>
-						<li><span>上传图片：</span><input name="wordImg1" type="file"></li>
-					</ul>
-					<ul class="subinfo-box">
-						<li><span>意思2：</span><input name="wordMean2"></li>
-						<li><span>上传图片：</span><input name="wordImg2" type="file"></li>
-					</ul>
-					<ul class="subinfo-box">
-						<li><span>意思3：</span><input name="wordMean3"></li>
-						<li><span>上传图片：</span><input name="wordImg3" type="file"></li>
-					</ul>
-					<ul class="subinfo-box" id="addMean4">
-					</ul>
+					<div id="subInfoContainer">
+						<ul class="subinfo-box">
+							<li><span>意思1：</span><input name="wordMean"></li>
+							<li><span>上传图片：</span><input name="wordImg" type="file"></li>
+						</ul>
+					</div>
+
+
 					<button class="add add-m" id="addMeanBtn">添加意思</button>
 				</li>
 				<li><h2>4.单词级别：</h2>
@@ -142,18 +136,22 @@
 		$("#addProBtn").mouseenter(function(){
 			$("#addPro1").html(
 					`<li><span>英式音标：</span>
-						<input name="wordPhonetic2">
+						<input name="wordPhonetic">
 					</li>
 					<li><span>上传发音文件：</span>
-						<input name="wordPronoun2" type="file">
+						<input name="wordPronoun" type="file">
 					</li>`
 				);
 		});
+		var i=1;
 		$("#addMeanBtn").mouseenter(function(){
-			$("#addMean4").html(`
-						<li><span>意思4：</span><input name="wordMean4"></li>
-						<li><span>上传图片：</span><input name="wordImg4" type="file"></li>
-				`);
+			i++;
+			$("#subInfoContainer").append(
+						`<ul class="subinfo-box">
+							<li><span>意思${i}：</span><input name="wordMean"></li>
+							<li><span>上传图片：</span><input name="wordImg" type="file"></li>
+						</ul>`
+			);
 		});
 
 
