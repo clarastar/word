@@ -8,6 +8,7 @@
 	/*font:0.625rem normal arial;*/
 	/*box-sizing: border-box;*/
 }
+
 body{
 	background:#fff;
 }
@@ -40,6 +41,145 @@ body{
 .nav-bar li:hover{
 	border:none;
 }
+
+/***页面主体****/
+.word-info-box{
+	background:#ffe;
+	width:70%;
+	margin:20px auto;
+	padding:15px 0 25px 0;
+}
+.container>h2{
+	padding:3px;
+	width:20%;
+	margin:0 auto;
+	text-align:center;
+	font-size:35px;
+	font-weight: bold;
+	position:relative;
+}
+.container>h3{
+	padding:3px 10px;
+	width:20%;
+	margin:0 auto;
+	text-align:center;
+	font-size:30px;
+	font-weight: bold;
+}
+.fa,.fa-volume-up{
+	color:#ff9933;
+	position:absolute;
+	right:0;
+	top:27px;
+}
+.w-audio{
+	display:none;
+}
+
+.word{
+	padding:6px 15px;
+	margin:0 auto;
+	width:90%;
+}
+.word>li{
+	display:inline-block;
+	border-radius: 5px;
+	cursor:pointer;
+}
+.word>li>a{
+	font-size: 28px;
+	background:#ff9933;
+	color:#fff;
+	padding:6px 15px;
+	border-radius:3px;
+}
+.img-box{
+	height:450px;
+	width:80%;
+	/*border:3px solid #ffcc99;*/
+	border-top: none;
+	text-align: center;
+	margin:0 auto;
+	/*background:#ffe;*/
+}
+img{
+	height:200px;
+	border:2px solid #ffcc99;
+	margin:8px;
+}
+
+/**计算机中的英文Computer Jargon**/
+.cword{
+	width:80%;
+	margin:0 auto;
+	/*border:2px solid #ffcc99;*/
+	border-top: none;
+	background:#ffffee;
+	padding:20px 10px;
+}
+.cword>li{
+	margin:10px 20px;
+}
+.cword>li>span{
+	display: inline-block;
+	border-radius: 5px;
+	padding:3px 5px;
+	font-size: 10px;
+	color:#333;
+	margin-right: 15px;
+	background:#fff;
+}
+.cword>li>a{
+	font-size: 20px;
+	border-radius: 5px;
+	color:#333;
+	padding:6px 15px;
+	background:#ffcc66;
+}
+.cword>li>a:hover{
+	background:#ff9933;
+	color:#fff;
+}
+
+
+
+.save,.next{
+	width:15%;
+	height:50px;
+	background:#ff9933;
+	color:#fff;
+	border-radius: 5px;
+	font-size:25px;
+	font-weight: bold;
+	padding:6px 10px;
+	cursor:pointer;
+}
+.next{
+	margin-left: 30%;
+}
+.save:hover,.next:hover{
+	/*border:5px solid #ff6633;button 是默认为border-box的*/
+	/*outline:5px solid #ff6633; 形状不受border-radius的影响 还是方形的*/
+	box-shadow: 0 0 3px #ff9933;
+}
+
+
+/***页脚部分****/
+
+footer{
+
+}
+video{
+	position:fixed;
+	bottom:0;
+	top:0;
+	left:0;
+	right:0;
+	z-index:-100;
+}
+
+
+
 
 /***页面导航 登陆模态框**/
 .modal{
@@ -87,116 +227,3 @@ body{
 	border-radius: 3px;
 	margin:10px;
 }
-
-
-
-/***页面主体****/
-.word-info-box{
-	background:#ffe;
-	width:70%;
-	margin:0 auto;
-}
-.container>h2{
-	text-align:center;
-	font-size:35px;
-	font-weight: bold;
-	padding:15px;
-}
-.fa{
-	color:#ff9933;
-}
-.w-audio{
-	display:none;
-}
-
-.word{
-	padding:6px 15px;
-	margin:0 auto;
-	width:90%;
-}
-.word>li{
-	display:inline-block;
-	border-radius: 5px;
-	cursor:pointer;
-}
-.word>li>a{
-	font-size: 28px;
-	background:#ff9933;
-	color:#fff;
-	padding:6px 15px;
-}
-.img-box{
-	height:450px;
-	width:80%;
-	/*border:3px solid #ffcc99;*/
-	border-top: none;
-	text-align: center;
-	margin:0 auto;
-	/*background:#ffe;*/
-}
-img{
-	height:200px;
-	border:2px solid #ffcc99;
-	margin:8px;
-}
-
-/**计算机中的英文Computer Jargon**/
-.cword{
-	width:80%;
-	margin:0 auto;
-	/*border:2px solid #ffcc99;*/
-	border-top: none;
-	background:#ffffee;
-	padding:20px 10px;
-}
-.cword>li{
-	margin:10px 20px;
-	display: inline-block;
-}
-.cword>li>span{
-	display: inline-block;
-	border-radius: 5px;
-	padding:3px 5px;
-	font-size: 10px;
-	color:#333;
-	margin-right: 15px;
-	background:#fff;
-}
-.cword>li>a{
-	font-size: 20px;
-	border-radius: 5px;
-	color:#333;
-	padding:6px 15px;
-	background:#ffcc66;
-}
-.cword>li>a:hover{
-	background:#ff9933;
-	color:#fff;
-}
-
-
-/**页脚***/
-
-.save,.next{
-	width:15%;
-	height:50px;
-	background:#ff9933;
-	color:#fff;
-	border-radius: 5px;
-	font-size:25px;
-	font-weight: bold;
-	padding:6px 10px;
-	cursor:pointer;
-}
-.next{
-	margin-left: 30%;
-}
-.save:hover,.next:hover{
-	/*border:5px solid #ff6633;button 是默认为border-box的*/
-	/*outline:5px solid #ff6633; 形状不受border-radius的影响 还是方形的*/
-	box-shadow: 0 0 3px #ff9933;
-}
-
-
-
-

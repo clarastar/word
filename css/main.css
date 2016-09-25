@@ -1,54 +1,85 @@
-
+*{
+    box-sizing: border-box;
+}
+/***页面主体信息**/
 .container{
     width:90%;
-    /*border:1px solid #333;*/
     margin:25px auto;
     text-align: center;
 }
+.inner-container{
+    overflow:hidden;
+}
 .m-content{
-    background:#ff9933;
+    /*background:rgb(242,237,220);*/
     width:80%;
     margin:0 auto;
-    height:300px;
     border-radius:5px;
+    border:50px solid rgb(242,237,220);
 }
 .c-title{
-    color:#fff;
-    font-style:italic;
     padding:6px;
     /*margin:15px auto;*/
 }
 
-.m-choice{
+.my-choice{
     float:left;
-    width:42%;
-    margin:30px;
+    width:50%;
+    padding:20px;
+    height:200px;
     text-align: right;
-    /*border:1px solid #ddd;*/
+    background:#ffcc66;
 }
-.m-choice>ul>li{
+.my-choice>ul>li{
     padding:6px;
     font-size:20px;
 }
 
-.m-choice a{
+.my-choice a{
     color:#fff;
 }
-.m-choice a:hover{
+.my-choice a:hover{
     color:#333;
 }
 
-.m-test{
+.my-test{
     float:right;
-    width:42%;
-    margin:30px;
+    padding:20px;
+    width:50%;
+    height:200px;
     text-align:left;
-    /*border:1px solid #ddd;*/
+    background:#ff9933;
 }
 
-.m-test a{
+.my-test a{
     color:#fff;
 }
-.m-test a:hover{
+.my-test a:hover{
     color:#333;
+}
+
+
+
+/***始终将footer固定在底部***/
+footer{
+    position:fixed;
+    bottom:0;
+    left:70%;
+
+}
+.feedback{
+    border:3px solid rgb(242,237,220);
+    border-radius:3px;
+    padding:6px 10px;
+    color:rgb(242,237,220);
+}
+
+
+video{
+    position:fixed;
+    bottom:0;
+    top:0;
+    left:0;
+    right:0;
+    z-index:-100;
 }
