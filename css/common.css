@@ -1,0 +1,93 @@
+*{
+    padding:0;
+    margin:0;
+    list-style: none;
+    text-decoration: none;
+    outline:none;
+    border:none;
+    /*font:0.625rem normal arial;*/
+    box-sizing: border-box;
+}
+
+.container{
+    width:90%;
+    /*border:1px solid #333;*/
+    margin:25px auto;
+    text-align: center;
+}
+.main-bg-flower{
+    position:fixed;
+    bottom:0;
+    left:0;
+    right:0;
+    top:0;  }
+.header{  position:relative;  }
+.nav-bar-box{
+    width:100%;
+    position:relative;
+    background:rgba(55,55,55,0.3);}
+.nav-bar{
+    width:80%;
+    margin:20px auto;
+    border-radius:5px;  }
+.nav-bar li{
+    display:inline-block;
+    padding:10px 0;
+    margin-left:4%;
+    width:15%;
+    text-align: center;
+    border-top:5px solid transparent;  }
+.nav-bar li:hover{
+    border-top:5px solid #ff9933;  }
+.nav-bar li a{
+    font-size:20px;
+    color:#fff;  }
+
+
+
+
+.modal{
+    position:fixed;
+    left:0;
+    top:0;
+    right:0;
+    bottom:0;
+    background: rgba(51,153,255,0.5);
+    display: none;
+}
+.modal-dialog{
+    width:500px;
+    height:800px; /**????***/
+    margin:200px auto;
+}
+.modal-content{
+    background:#ffe;
+    padding:8px;
+    border-radius:5px;
+    font-size:20px; /**字体大小会影响元素的排列***/
+}
+.modal-content>span{
+    width:80px;
+    text-align:right;
+    border:1px solid #ddd;
+    display: inline-block;
+    height:25px;
+    margin:10px;
+}
+.modal-content .inp{
+    background: #eee;
+    border:1px solid #ff9933;
+    margin:6px;
+    width:150px;
+    height:15px;
+    padding:6px 10px;
+}
+.btnReg,.btnLog{
+    background:#ff9933;
+    width:80px;
+    height:25px;
+    color:#fff;
+    font:20px solid 'arial';
+    border-radius: 3px;
+    margin:10px;
+}

@@ -1,53 +1,14 @@
-*{
-	padding:0;
-	margin:0;
-	list-style: none;
-	text-decoration: none;
-	outline:none;
-	border:none;
-	/*font:0.625rem normal arial;*/
-	/*box-sizing: border-box;*/
-}
 
-body{
-	background:#fff;
-}
-/**页面导航***/
-.container{
-	width:90%;
-	/*border:1px solid #333;*/
-	margin:25px auto;
-	text-align: center;
-}
-.nav-bar{
-	width:80%;
-	margin:0 auto;
-	/*border:3px solid #ffcc99;*/
-	background:#ff9933;
-	border-radius:5px;
-}
-.nav-bar li{
-	display:inline-block;
-	padding:6px 15px;
-	width:13%;
-	border:2px solid #ffffff;
-}
-
-.nav-bar li a{
-	color:#fff;
-	font-size:20px;
-}
-
-.nav-bar li:hover{
-	border:none;
-}
-
-/***页面主体****/
+/*******
+*页面主体*
+*******/
 .word-info-box{
 	background:#ffe;
 	width:70%;
 	margin:20px auto;
 	padding:15px 0 25px 0;
+	max-height:1500px;
+	overflow:hidden;
 }
 .container>h2{
 	padding:3px;
@@ -102,7 +63,7 @@ body{
 	margin:0 auto;
 	/*background:#ffe;*/
 }
-img{
+.img-box img{
 	height:200px;
 	border:2px solid #ffcc99;
 	margin:8px;
@@ -142,7 +103,6 @@ img{
 }
 
 
-
 .save,.next{
 	width:15%;
 	height:50px;
@@ -164,66 +124,15 @@ img{
 }
 
 
-/***页脚部分****/
 
+
+
+
+/*******
+*页脚部分*
+*****/
 footer{
-
+/*height:1000px;*/
 }
-video{
-	position:fixed;
-	bottom:0;
-	top:0;
-	left:0;
-	right:0;
-	z-index:-100;
-}
-
-
-
 
 /***页面导航 登陆模态框**/
-.modal{
-	position:fixed;
-	left:0;
-	top:0;
-	right:0;
-	bottom:0;
-	background: rgba(51,153,255,0.5);
-	display: none;
-}
-.modal-dialog{
-	width:500px;
-	height:800px; /**????***/
-	margin:200px auto;
-}
-.modal-content{
-	background:#ffe;
-	padding:8px;
-	border-radius:5px;
-	font-size:20px; /**字体大小会影响元素的排列***/
-}
-.modal-content>span{
-	width:80px;
-	text-align:right;
-	border:1px solid #ddd;
-	display: inline-block;
-	height:25px;
-	margin:10px;
-}
-.modal-content .inp{
-	background: #eee;
-	border:1px solid #ff9933;
-	margin:6px;
-	width:150px;
-	height:15px;
-	padding:6px 10px;
-}
-.btnReg,.btnLog{
-	background:#ff9933;
-	width:80px;
-	height:25px;
-	color:#fff;
-	font:20px solid 'arial';
-	border-radius: 3px;
-	margin:10px;
-}
