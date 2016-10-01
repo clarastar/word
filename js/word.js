@@ -1,26 +1,6 @@
-
-
-/**导航栏的注册与登陆**/
-btLogin.onclick=function(){
-	$('#modalLogin').css({display:'block'});
-}
-btnLog.onclick=function(){
-	$('#modalLogin').css({display:'none'});
-}
-
-btReg.onclick=function(){
-	$('#modalRegister').css({display:'block'});
-}
-btnReg.onclick=function(){
-	$('#modalRegister').css({display:'none'});
-}
-// $(".nav-bar li").mouseenter(
-// 	function(){
-// 		$(this).css({border:"2px solid #ffffff"});
-// 	}
-// );
-
-
+$(function(){
+	$('#nav-bar-box').load('header.php');
+});
 
 //统一元素上绑定不同的事件 且作用函数基本一致  这里应该有更简单的写法吧 
 /***网站主体  为每一个单词含义和图片绑定鼠标移入事件****/
