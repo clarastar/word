@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Com背词-个人注册</title>
+    <link rel="icon" href="img/autumn.JPG">
+    <link charset="utf-8" rel="stylesheet" href="css/regist.css">
+</head>
+<body>
+<!-- SDK 登录 -->
+
+<!--<div class="nav-bar-box" id="nav-bar-box"></div>-->
+<div class="w">
+    <div id="logo">
+        <a href="javascript:return false;" class="logo">
+            <img src="img/autumn.JPG" alt="Com背词" width="170" height="60">
+        </a>
+        <div class="logo-title">欢 迎 注 册</div>
+    </div>
+</div>
+<div class="video-frame container" poster="img/city.JPG">
+    <video class="center-block" autoplay loop src="img/flower.mp4"></video>
+</div>
+<div class="content reg-container">
+    <form class="form form-horizontal" action="#">
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="username">用户名:</label>
+            <div class="col-md-5">
+                <input id="username" name="uname" type="text" class="form-control" autofocus placeholder="请输入用户名" required pattern="^[a-zA-Z0-9]{8,16}$">
+            </div>
+            <label id="usernameTip" class="col-md-5 hide control-default">请输入8至16位的英文或数字.</label>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="password">密码:</label>
+            <div class="col-md-5">
+                <input id="password" name="upwd" type="password" class="form-control" placeholder="请输入密码" required pattern="^[0-9]{6,12}$">
+            </div>
+            <label id="passwordTip" class="col-md-5 hide control-default">请输入6至12位的数字.</label>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label" for="email">电子邮件:</label>
+            <div class="col-md-5">
+                <input id="email" type="email" class="form-control" placeholder="请输入电子邮件" required name="email">
+            </div>
+            <label id="emailTip" class="col-md-5 hide control-default">请输入你的电子邮件地址.</label>
+        </div>
+        <div class="form-group">
+            <label class="col-md-2 control-label"></label>
+            <div class="col-md-5">
+                <input id="subBtn" type="submit" value="注册" class="btn btn-success btn-block">
+            </div>
+        </div>
+    </form>
+</div>
+<script src="js/jquery-1.11.3.js"></script>
+<script src="js/regist.js"></script>
+</body>
+</html>
