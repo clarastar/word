@@ -1,0 +1,156 @@
+/*******
+*页面主体*
+*******/
+.main-container {
+  background: #ffe;
+  height: 100%;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -20px;
+  margin-bottom: 50px;
+  .word-info-box {
+    padding: 15px 0 25px 0;
+    border: 1px solid #ddd;
+    .word-pronoun-box {
+      padding: 7px 0;
+      margin: 0 auto;
+      border: 1px solid #ddd;
+      .word-title {
+        padding: 3px;
+        margin: 0 auto;
+        font-weight: bold;
+        margin-left: 16px;
+      }
+      .word-audio {  display: none;  }
+      .word-pronoun {
+        padding: 3px;
+        margin: 0 auto;
+        font-weight: bold;
+        .glyphicon.glyphicon-volume-up {
+          color: #ff9933;
+          top: 10px;
+          font-size: 35px;
+        }
+      }
+    }
+    .word-mean {margin: 0 auto; width:100%; border:1px solid #aaa;
+      li { border:1px solid #aaa;
+        display: inline-block;
+        border-radius: 5px;
+        cursor: pointer;
+        a {  color: #fff;  padding: 6px 15px;  border-radius: 3px;  }
+      }
+      li:nth-child(1){  background-color:#ff9933; }
+      li:nth-child(2){  background-color: rgb(227,186,98)!important;  }
+      li:nth-child(3){  background-color: rgb(93,122,100) !important;  }
+      li:nth-child(4){  background-color: rgb(241,122,90) !important;  }
+    }
+    .img-box {
+      border-radius: 8px;
+      border-top: none;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .save, .next {
+      height: 50px;
+      background: #ff9933;
+      color: #fff;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .next {  margin-left: 30%;  }
+    .save:hover, .next:hover {  box-shadow: 0 0 8px #ff9933;  }
+  }
+}
+
+  /********页脚部分******/
+.bottom-navbar{display:none;  }
+
+@media all and (min-width: 992px){
+  .word-pronoun-box{  width:215px;  margin-bottom:23px;
+    .word-pronoun,.word-title{  font-size:35px;  }
+  }
+  .word-mean {
+    li{  width:200px;  margin:20px 5px;
+      a{ font-size: 28px;  padding:6px 15px;  }
+    }
+  }
+  .img-box{ img{height:250px;  border:2px solid #ffcc99;}
+  }
+  .inner-container{
+    margin-top:80px;
+    margin-bottom:80px;
+    font-size:28px;
+  }
+  .save, .next {
+    width: 200px;
+    border-radius: 5px;
+    padding: 6px 10px;
+  }
+}
+@media all and (max-width: 992px){
+  .img-box{img{
+    height:200px;
+    border:2px solid #ffcc99;  }
+   }
+  .word-pronoun-box{  width:190px;  margin-bottom:18px;
+    .word-pronoun,.word-title{  font-size:30px;  }
+  }
+  .word-mean {
+    li{  width:100%;
+      a{font-size: 23px;  padding:5px 12px;  }
+    }
+    li:first-child{ margin-top: 50px; }
+    li:not(:first-child){ margin-top: 156px; }
+  }
+  .inner-container{
+    margin-top:70px;
+    margin-bottom:80px;
+    font-size:23px;
+  }
+  .save, .next {
+    width: 180px;
+    border-radius: 5px;
+    padding: 5px 8px;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .img-box {border:1px solid #ddd;
+    img {  height: 150px;  border: 2px solid #ffcc99;
+    }
+  }
+  .word-pronoun-box {  width: 165px;  margin-bottom: 15px;
+    .word-pronoun, .word-title {  font-size: 25px;  }
+  }
+  .word-mean {
+    li{  width:100%;
+      a{ font-size: 18px;  padding: 3px 6px; }
+    }
+    li:first-child{ margin-top: 30px; }
+    li:not(:first-child){ margin-top: 113px; }
+  }
+  .inner-container {  margin-top: 70px;  margin-bottom: 70px;  }
+  .save, .next {
+    width: 100px;
+    border-radius: 5px;
+    padding: 3px 5px;
+  }
+  .bottom-navbar {
+    display: block !important;
+    background: #fff;
+    .container-fluid {
+      padding-top: 7px;
+      padding-bottom: 7px;
+      a {  color: #ff9933;  }
+    }
+  }
+}
+
+
+
+
+
+

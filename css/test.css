@@ -1,0 +1,527 @@
+html,body{
+    -webkit-text-size-adjust:none; }
+body{
+    margin: 0;
+    font-family: Helvetica,Arial,"\9ed1\4f53","\5b8b\4f53", sans-serif;
+    font-size: 16px; 
+    background: url("http://baicizhan.qiniucdn.com/games/worddown/img/bg.png");
+    background-size: contain;
+}
+@media screen and (min-width: 640px){
+    .option {
+        font-size: 16px !important;
+    }
+    .content {
+        font-size: 16px;
+    }
+    .latest-topic{
+        padding-top: 5px;
+        text-align: center;
+        font-size: 16px;
+        color: #6ad2bd;
+    }
+}
+@media screen and (min-width: 800px) {
+    .mycontainer{
+        width: 800px;
+    }
+
+}
+*{
+    box-sizing:border-box;
+}
+img {
+  vertical-align: middle;
+  border: 0;
+}
+.container {
+  margin-right: auto;
+  margin-left: auto;
+   max-width: 100%;
+}
+.container:before{
+  display: table;
+  content: " "; 
+}
+.container:after{
+  clear: both;
+}
+.row {
+ 
+}
+.row:before,
+.row:after{
+     display: table;
+  content: " ";
+}
+.row:after{
+     clear: both;
+}
+.mycontainer{
+    padding: 0;
+    display:none;/*æµ‹è¯•*/
+}
+.index{
+}
+.imgBtn{
+    padding-top: 20px;
+    text-align: center;
+}
+@media screen and (max-height: 480px) {
+.imgBtn{
+    padding-top:5px;
+    text-align: center;
+}
+}
+.latest-topic{
+    padding-top: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: #6ad2bd;
+}
+#game-container {
+    overflow: visible;
+    background-color: #fff;
+    position:relative;
+    margin:0;
+    max-width: 100% !important;
+    margin-top: 50px;
+    border-top-width: 0px;
+     background: url("http://baicizhan.qiniucdn.com/games/worddown/img/bg.png");
+    background-size: contain;
+}
+#manuZone{
+    z-index: 99;
+    position: absolute;
+}
+.optionDiv{
+  position: relative;
+  float: left;
+  width: 33.3%;
+  top: 80%;
+  height: 40%;
+}
+.option{
+    box-sizing: border-box;
+    position: absolute;
+    text-align: center;
+    background-color: #F0EBDF;
+    overflow: hidden;
+    border: solid 0px white;
+    background:url("http://baicizhan.qiniucdn.com/games/worddown/img/btn/option.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    z-index: 100;
+}
+.titlePic{
+   width:0px; height:0px; overflow:hidden;
+}
+.selected-wrong-top{
+    background-color: #F0EBDF;
+    background:url("http://baicizhan.qiniucdn.com/games/worddown/img/0.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.word{
+    position: absolute;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    background:url("http://baicizhan.qiniucdn.com/games/worddown/img/1.png");
+    background-size: 100% 100%;
+    z-index: 100;
+    }
+.content{
+    display: inline-block;
+    vertical-align: middle;
+}
+/*é”™è¯¯å•è¯æ˜¾ç¤º*/
+.wrong-word-area{
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 100%;
+    min-height: 100px;}
+.wrong-word-area  .wrong-word-title{
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #616161;
+}
+.wrong-word{
+    padding: 5px 0;
+    margin: 0 auto;
+    width: 70%;
+    display: block;
+    border-bottom: solid 1px lightgray; }
+.wrong-word-text{
+    text-align: left;
+    display: block; }
+.wrong-word-mean{
+    text-align: left;
+    display: block; }
+.wrong-word-content{
+    height: 350px;
+    font-size: 14px;
+    color: #909090;
+}
+/*é”™è¯¯å•è¯æ˜¾ç¤º*/
+/*æ¸¸æˆçª—å£ä¸Šçš„ä¿¡æ¯    */
+#game-tips{
+    position: absolute;
+    height: 50px;
+    margin: 0 auto;
+    background-color: #fbd79f;
+    margin-top: -50px;
+    width: 100%;
+    line-height: 50px;
+}
+#game-tips div{
+    display: inline-block;
+}
+#game-tips > .wordNumberWrapper{
+    position:relative;
+    width: 100%;
+    text-align: left;
+    height: 100%;
+    vertical-align: initial;
+}
+
+.timeNum{
+float: left;
+}
+.rightWordLabel{
+    width: 40%;
+    font-size: 14px;
+    color: #757575;
+    float: left;
+
+}
+.rightWordLabel2{
+    width: 20%;
+    font-size: 14px;
+    color: #757575;
+    float: left;
+
+}
+.rightWordNumber{
+    width: 56px;
+    font-weight: bold;
+    color: #000000;
+    float: left;
+    position: absolute;
+    z-index: 999;
+    left: 90px;
+
+}
+.rightWordNumber2{
+    font-weight: bold;
+    color: #000000;
+    float: left;
+     width: 56px;
+     position: absolute;
+    z-index: 999;
+    left: 210px;
+}
+.result_exam{
+  position: absolute;
+  margin-top: 0px;
+  left: 52%;
+  z-index: 999;
+  font-size: x-large;
+  padding-top: 10px;
+}
+.resultMain{
+    position:relative;
+    width: 100%;
+    text-align: center;
+}
+.topbar{
+    text-align: center;
+    margin:0 auto;
+    height: 60px;
+}
+.resultTop{
+    position:relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+.imgTopbar{
+    max-height: 60px;
+    height: 60px;
+}
+.resultFenShu{
+    margin-top: -110px;
+    font-size: 40px;
+    font-weight: bold;
+}
+.game-tip{
+    margin-top: 45px;
+    height: 30px;
+    line-height: 30px;
+    color: lightgray;
+    font-weight: bold; }
+.game-tip > span{
+    font-weight: lighter; }
+/*æ¸¸æˆçª—å£ä¸Šçš„ä¿¡æ¯    */
+.level-info-container{
+    width: 249px;
+    height: 552px;
+    padding: 20px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    background-color: #fafafa;
+    text-align: left;
+}
+.gameModel{
+    position: relative;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #616161;
+}
+.inline-wrapper > div{
+    display: inline-block; }
+/*é«˜åˆ†å±•ç¤º*/
+.highScore-wrapper{
+    margin-bottom: 50px;
+}
+.hightScore-label{
+    margin-right: 30px;
+    color: #909090;
+}
+.highScore-num{
+    font-size: 20px;
+    color: #00C5E5;
+}
+.wrong-word-area dd {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #dedede;
+}
+/*é«˜åˆ†å±•ç¤º*/
+/*levelå±•ç¤º*/
+.level-title{
+    text-align: center;
+    font-size: 14px;
+    color: #616161;
+}
+.level-wrapper .level-btn-wrapper {
+    position: relative;
+    display: block;
+    margin-bottom: 50px;
+}
+.level-btn-wrapper hr {
+    position: absolute;
+    top: 23%;
+    left: 20px;
+    width: 185px;
+    height: 2px;
+    color: #909090;
+}
+.level-btn {
+    position: relative;
+    z-index: 10;
+    margin-left: 30px;
+    cursor: pointer;
+}
+.decrease-level{
+    margin-top: 20px;
+    margin-left: 10px;
+}
+.play-tip{
+    position: absolute;
+    text-align: center;
+    margin-top: 150px;
+    color: #9B9B9B;
+    font-size: 1.4rem;
+    vertical-align: middle;
+    left: 0;
+    right: 0;
+}
+/*levelå±•ç¤º*/
+.pause-controller{
+    position:absolute;
+    right: 0px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 1.6rem;
+    margin-top: 10px;
+    color: #909090;
+    background: url("http://baicizhan.qiniucdn.com/games/worddown/img/topBar/stop.png");
+    background-size: 100% 100%;
+}
+.pause-controller-pause{
+    position:absolute;
+    right: 0px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    font-size: 1.6rem;
+    margin-top: 10px;
+    color: #909090;
+    background: url("http://baicizhan.qiniucdn.com/games/worddown/img/topBar/play.png");
+     background-size: 100% 100%;
+}
+/* reportç›¸å…³æ ·å¼ */
+#report{
+    display:none;/*æµ‹è¯•*/
+}
+.insistTimeDiv{
+    width: 120px;
+    text-align: center;
+   display: inline-block;
+    margin-right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    height: 76px;
+}
+.insistTime{
+  margin-top: -36px;
+  letter-spacing: 1px;
+}
+.rightNumDiv{
+    width: 120px;
+    text-align: center;
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 20px;
+    font-weight: bold;
+     height: 76px;
+}
+.rightNum{
+    margin-top: -35px;
+    letter-spacing: 1px;
+}
+.btnGroup{
+    position: relative;
+    margin-top: 100px;
+    text-align: center;
+}
+.downloadTip{
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    width: 100%;
+}
+.downloadTip>img{
+    max-width: 640px;
+}
+.report-title{
+    padding-top: 90px;
+    padding-bottom: 20px;
+    text-align: center;
+    color: #757575;
+    background-color: #f8f6f1;
+    font-size: 20px;
+}
+.cover{
+  display: none;
+  background: rgba(47,51,60,0.9);
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  text-align: right;
+  z-index: 9999;
+}
+#teach{
+  display: none;
+  background: rgba(47,51,60,0.9);
+  position: fixed;
+  text-align: center;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  z-index: 9999;
+  line-height: 100px;
+}
+.fingerImg{
+  width: 70%;
+  margin-top: 25%;
+  vertical-align: middle;
+}
+.beginImg{
+  margin-top: 50%;
+  width: 30%;
+  margin-left: 10px;
+}
+@media screen and (max-height: 481px) {
+.beginImg{
+    margin-top: 30%;
+    }
+}
+.closeX{
+      font-size: 30px;
+  color: white;
+  float: right;
+  width: 30px;
+  height: 30px;
+  line-height: 25px;
+  border: 2px solid white;
+  border-radius: 30px;
+  margin-top: 10px;
+  margin-right: 6px;
+  font-weight: lighter;
+}
+.report-right-wrapper, .report-highscore-wrapper{
+    margin-top: 34px;
+    color: #757575;
+}
+.report-right-wrapper > span{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.report-right-icon, .report-highscore-icon{
+    width: 14%;
+    margin-left: 10%;
+}
+.report-right-txt, .report-highscore-txt{
+    width: 50%;
+}
+.report-right-num, .report-highscore-num{
+    width: 20%;
+    color: #005c5c;
+    text-align: left !important;
+}
+.report-highscore-wrapper > span{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+}
+.report-btn-wrapper{
+    margin-top: 60px;
+    text-align: center;
+}
+.report-btn-wrapper > span{
+    width: 35%;
+}
+.report-btn-wrapper > span:last-child{
+    margin-left: 0%;
+}
+.option-selected-wrong{
+    background-color: #FFA8BC;
+    color: #ffffff;
+    border-color: transparent;
+    background:url("http://baicizhan.qiniucdn.com/games/worddown/img/btn/wrong.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.option-selected-right{
+    background-color: #98F1E3;
+    color: #ffffff;
+    border-color: transparent;
+    background:url("http://baicizhan.qiniucdn.com/games/worddown/img/btn/right.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.report-icon > img{
+    -webkit-transform: scale(0.65);
+    -moz-transform: scale(0.65);
+    -ms-transform: scale(0.65);
+    -o-transform: scale(0.65);
+    transform: scale(0.65);
+}
+/* end reportç›¸å…³æ ·å¼ */

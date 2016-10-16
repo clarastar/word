@@ -1,128 +1,54 @@
 
 $(function(){
     $('#nav-bar-box').load('header.php');
-});
-
-/*
- TODO ±íµ¥ÑéÖ¤µÄĞèÇó
- TODO * ±íµ¥ÔªËØ»ñÈ¡½¹µãÊ± - ÏÔÊ¾ÊäÈëÌáÊ¾ÄÚÈİ
- TODO * ±íµ¥ÔªËØÊ§È¥½¹µãÊ± - Íê³É±íµ¥ÔªËØµÄÑéÖ¤
- TODO   * ÑéÖ¤Ê§°Ü - ¸ø³öÊ§°ÜµÄĞÅÏ¢
- TODO   * ÑéÖ¤³É¹¦ - ¸ø³ö³É¹¦µÄĞÅÏ¢
- TODO * classµÄËµÃ÷
- TODO   * Òş²ØºÍÏÔÊ¾µÄclass
- TODO     * .show - ÏÔÊ¾
- TODO     * .hide - Òş²Ø
- TODO   * ±íÊ¾²»Í¬º¬ÒåµÄclass
- TODO     * .control-default - ÌáÊ¾ĞÅÏ¢
- TODO     * .control-error - ´íÎóĞÅÏ¢
- TODO     * .control-success - ³É¹¦ĞÅÏ¢
- */
-/**
- * TODO ·â×°Ò»¸ö×¨ÃÅÓÃÓÚ±íµ¥2.0µÄÑéÖ¤µÄº¯Êı
- * TODO * ½«²»Í¬Çë¿îÏÂ²»Í¬µÄÄÚÈİ - º¯ÊıµÄ²ÎÊı
- * TODO   * ±»ÑéÖ¤µÄÔªËØ²»Í¬ - elem
- * TODO   * ÑéÖ¤ÔªËØµÄÌáÊ¾ÔªËØ²»Í¬ - elemTip
- * TODO   * ±»ÑéÖ¤ÔªËØµÄÄ¬ÈÏÌáÊ¾²»Í¬ - msg
- * TODO   * ÑéÖ¤ºóµÄÌáÊ¾ÄÚÈİ - elemText
- */
+})
 
 var username = document.getElementById("username");
 var usernameTip = document.getElementById("usernameTip");
 
-
-//TODO °ó¶¨»ñÈ¡½¹µãÊÂ¼ş
 username.onfocus = function(){
-    //TODO ÏÔÊ¾ÌáÊ¾ĞÅÏ¢
     usernameTip.className = "col-md-5 show control-default";
-    usernameTip.innerHTML = "ÇëÊäÈë8ÖÁ16Î»µÄÓ¢ÎÄ»òÊı×Ö.";
+    usernameTip.innerHTML = "è¯·è¾“å…¥8è‡³16ä½çš„è‹±æ–‡æ•°å­—";
 }
 
-
-//TODO °ó¶¨Ê§È¥½¹µãÊÂ¼ş
 username.onblur = function(){
     if(username.validity.valid){
-        //TODO ±íÊ¾ÊäÈëÕıÈ·
         usernameTip.className = "col-md-5 show control-success";
-        usernameTip.innerHTML = "ÓÃ»§ÃûÊäÈëÕıÈ·";
+        usernameTip.innerHTML = "ç”¨æˆ·åè¾“å…¥æ­£ç¡®";
     }else if(username.validity.valueMissing){
-        //TODO ±íÊ¾ÖµÎª¿Õ
         usernameTip.className = "col-md-5 show control-error";
-        usernameTip.innerHTML = "ÓÃ»§Ãû²»ÄÜÎª¿Õ";
+        usernameTip.innerHTML = "ç”¨æˆ·åä¸èƒ½ä¸ºç©º";
     }else if(username.validity.patternMismatch){
-        //TODO ±íÊ¾ÕıÔò²»Æ¥Åä
         usernameTip.className = "col-md-5 show control-error";
-        usernameTip.innerHTML = "ÓÃ»§ÃûÊäÈë²»ÕıÈ·";
+        usernameTip.innerHTML = "ç”¨æˆ·åæ ¼å¼ä¸æ­£ç¡®";
     }
 }
 
-
-//TODO ÃÜÂëµÄ±íµ¥ÑéÖ¤
 var password = document.getElementById("password");
 var passwordTip = document.getElementById("passwordTip");
 password.onfocus = function(){
-    //TODO ÏÔÊ¾ÌáÊ¾ĞÅÏ¢
     passwordTip.className = "col-md-5 show control-default";
-    passwordTip.innerHTML = "ÇëÊäÈë6ÖÁ12Î»µÄÊı×Ö.";
+    passwordTip.innerHTML = "è¯·è¾“å…¥6è‡³12ä½æ•°å­—";
 }
 password.onblur = function(){
     if(password.validity.valid){
         passwordTip.className = "col-md-5 show control-success";
-        passwordTip.innerHTML = "ÃÜÂëÊäÈëÕıÈ·";
+        passwordTip.innerHTML = "å¯†ç è¾“å…¥æ­£ç¡®";
     }else if(password.validity.valueMissing){
         passwordTip.className = "col-md-5 show control-error";
-        passwordTip.innerHTML = "ÃÜÂë²»ÄÜÎª¿Õ";
+        passwordTip.innerHTML = "å¯†ç ä¸èƒ½ä¸ºç©º";
     }else if(password.validity.patternMismatch){
         passwordTip.className = "col-md-5 show control-error";
-        passwordTip.innerHTML = "ÃÜÂëÊäÈë²»ÕıÈ·";
-    }
-}
-
-
-var options = {
-    elem : document.getElementById("password"),
-    elemTip : document.getElementById("passwordTip"),
-    msg : document.getElementById("passwordTip").innerHTML,
-    elemText : "ÃÜÂë"
-}
-validityForm(options);
-
-
-/*
-  TODO opions²ÎÊı - ÏòÑéÖ¤º¯Êı´«µİµÄĞÅÏ¢
-  TODO * ²ÎÊıÀàĞÍ - Object
-  TODO   {
-  TODO       elem : ±»ÑéÖ¤µÄÔªËØ,
-  TODO       elemTip : ±»ÑéÖ¤ÔªËØµÄÌáÊ¾±êÇ©,
-  TODO       msg : ±»ÑéÖ¤ÔªËØµÄÄ¬ÈÏÌáÊ¾ĞÅÏ¢,
-  TODO       elemText : ±»ÑéÖ¤ÔªËØµÄÕæÕıº¬Òå
-  TODO   }
- */
-function validityForm(options){
-    //TODO »ñÈ¡½¹µã - ÏÔÊ¾ÌáÊ¾ÄÚÈİ
-    options.elem.onfocus = function(){
-        options.elemTip.className = "col-md-5 show control-default";
-        options.elemTip.innerHTML = options.msg;
-    }
-    //TODO Ê§È¥½¹µã - ±íµ¥ÔªËØÑéÖ¤
-    options.elem.onblur = function(){
-        if(options.elem.validity.valid){
-            options.elemTip.className = "col-md-5 show control-success";
-            options.elemTip.innerHTML = options.elemText+"ÊäÈëÕıÈ·.";
-        }
-        if(options.elem.required){
-            if(options.elem.validity.valueMissing){
-                options.elemTip.className = "col-md-5 show control-error";
-                options.elemTip.innerHTML = options.elemText+"²»ÄÜÎª¿Õ";
-            }
-        }
+        passwordTip.innerHTML = "å¯†ç æ ¼å¼ä¸æ­£ç¡®";
     }
 }
 
 $( "form" ).on( "submit", function( event ) {
     event.preventDefault();
-    var data=$().serialize();
-    $.post("123.php",function(data){
+    var registInfo=$(this).serialize();
+    window.location.href="main.html";
+
+    $.post("#url",registInfo,function(data){
         console.log(data);
     });
 });

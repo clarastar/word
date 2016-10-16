@@ -1,60 +1,133 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <title>Com±³´Ê-¸öÈË×¢²á</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ComWord-ä¸ªäººæ³¨å†Œ</title>
+    <meta charset="utf-8"/>
     <link rel="icon" href="img/autumn.JPG">
-    <link charset="utf-8" rel="stylesheet" href="css/regist.css">
+    <link rel="stylesheet" href="css/regist.css">
+    <link href="css/nomalize.css" rel="stylesheet">
+    <link href="css/header.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.min.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
 </head>
 <body>
-<!-- SDK µÇÂ¼ -->
 
-<!--<div class="nav-bar-box" id="nav-bar-box"></div>-->
-<div class="w">
-    <div id="logo">
-        <a href="javascript:return false;" class="logo">
-            <img src="img/autumn.JPG" alt="Com±³´Ê" width="170" height="60">
-        </a>
-        <div class="logo-title">»¶ Ó­ ×¢ ²á</div>
+<header class="header" id="header">
+    <div class="nav-bar-box" id="nav-bar-box">
+    </div>
+</header>
+<div class="main">
+    <div class="container">
+        <div class="text-center">
+            <h1>æ¬¢ è¿ æ³¨ å†Œ <img src="img/comword-s.png" alt=""/></h1>
+        </div>
+    </div>
+    <!--<div class="video-frame container">-->
+        <!--<video class="center-block" autoplay loop src="img/flower.mp4"></video>-->
+    <!--</div>-->
+    <div class="content container">
+        <form class="form form-horizontal" action="#">
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-md-2 control-label" for="username">ç”¨æˆ·å:</label>
+                    <div class="col-md-5">
+                        <input id="username" name="uname" type="text" class="form-control" autofocus placeholder="è¯·è¾“å…¥ç”¨æˆ·å" required pattern="^[a-zA-Z0-9]{8,16}$">
+                    </div>
+                    <label id="usernameTip" class="col-md-5 hide control-default">è¯·è¾“å…¥8è‡³16ä½çš„è‹±æ–‡æˆ–æ•°å­—.</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-md-2 control-label" for="password">å¯†ç :</label>
+                    <div class="col-md-5">
+                        <input id="password" name="upwd" type="password" class="form-control" placeholder="è¯·è¾“å…¥å¯†ç " required pattern="^[0-9]{6,12}$">
+                    </div>
+                    <label id="passwordTip" class="col-md-5 hide control-default">è¯·è¾“å…¥6è‡³12ä½çš„æ•°å­—.</label>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <label class="col-md-2 control-label" for="email">ç”µå­é‚®ä»¶:</label>
+                    <div class="col-md-5">
+                        <input id="email" type="email" class="form-control" placeholder="è¯·è¾“å…¥ç”µå­é‚®ä»¶" required name="email">
+                    </div>
+                    <label id="emailTip" class="col-md-5 hide control-default">è¯·è¾“å…¥ä½ çš„ç”µå­é‚®ä»¶åœ°å€.</label>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-2">
+                        <input id="subBtn" type="submit" value="æ³¨å†Œ" class="btn btn-success btn-block">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-2">
+                        <a href="#modalLogin">å·²ç»æ³¨å†Œï¼Œç›´æ¥ç™»å½•</a>
+                    </div>
+                </div>
+            </div>
+        </form>
     </div>
 </div>
-<div class="video-frame container" poster="img/city.JPG">
-    <video class="center-block" autoplay loop src="img/flower.mp4"></video>
+
+<div class="modal" id="modalLogin">
+    <div class="modal-dialog">
+        <div class='modal-content'>
+            <div class="modal-inner-content">
+                <h2>ä½ å¥½ï¼Œæ¬¢è¿ç™»é™†ï¼</h2>
+                <form id="login-form" action="#">
+                    <div class="form-group">
+                        <label for="username">ç”¨æˆ·å:</label>
+                        <input id="username" name="uname" class="form-control" autofocus placeholder="è¯·è¾“å…¥ç”¨æˆ·å">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">å¯†ç :</label>
+                        <input id="password" name="upwd" type="password" class="form-control" placeholder="è¯·è¾“å…¥å¯†ç ">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-md-offset-5 control-label" for="btnLog"></label>
+                        <input id="btnLog" type="submit" value="æäº¤" class="btn btn-block">
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-offset-5 control-label" ></label>
+                        <a href="regist.html" >æ³¨å†Œ</a>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-offset-5 control-label"></label>
+                        <a href="main.html">è¿”å›é¦–é¡µ</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="content reg-container">
-    <form class="form form-horizontal" action="#">
-        <div class="form-group">
-            <label class="col-md-2 control-label" for="username">ÓÃ»§Ãû:</label>
-            <div class="col-md-5">
-                <input id="username" name="uname" type="text" class="form-control" autofocus placeholder="ÇëÊäÈëÓÃ»§Ãû" required pattern="^[a-zA-Z0-9]{8,16}$">
-            </div>
-            <label id="usernameTip" class="col-md-5 hide control-default">ÇëÊäÈë8ÖÁ16Î»µÄÓ¢ÎÄ»òÊı×Ö.</label>
-        </div>
-        <div class="form-group">
-            <label class="col-md-2 control-label" for="password">ÃÜÂë:</label>
-            <div class="col-md-5">
-                <input id="password" name="upwd" type="password" class="form-control" placeholder="ÇëÊäÈëÃÜÂë" required pattern="^[0-9]{6,12}$">
-            </div>
-            <label id="passwordTip" class="col-md-5 hide control-default">ÇëÊäÈë6ÖÁ12Î»µÄÊı×Ö.</label>
-        </div>
-        <div class="form-group">
-            <label class="col-md-2 control-label" for="email">µç×ÓÓÊ¼ş:</label>
-            <div class="col-md-5">
-                <input id="email" type="email" class="form-control" placeholder="ÇëÊäÈëµç×ÓÓÊ¼ş" required name="email">
-            </div>
-            <label id="emailTip" class="col-md-5 hide control-default">ÇëÊäÈëÄãµÄµç×ÓÓÊ¼şµØÖ·.</label>
-        </div>
-        <div class="form-group">
-            <label class="col-md-2 control-label"></label>
-            <div class="col-md-5">
-                <input id="subBtn" type="submit" value="×¢²á" class="btn btn-success btn-block">
-            </div>
-        </div>
-    </form>
-</div>
+
+
+<script>
+    (function () {
+        var s = document.createElement("script");
+        s.onload = function () {
+            bootlint.showLintReportForCurrentDocument([]);
+        };
+        s.src = "js/bootlint.js";
+        document.body.appendChild(s)
+    })();
+</script>
 <script src="js/jquery-1.11.3.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/login.js"></script>
 <script src="js/regist.js"></script>
 </body>
 </html>

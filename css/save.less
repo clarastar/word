@@ -1,0 +1,30 @@
+
+.main-box{
+  height:100%;
+  width:100%;
+  background: #ffe;
+  margin-top: -20px;
+  padding-top:30px;
+  .save-box{  width:100%;  text-align: center;  }
+  .pagination{
+    li > a { background-color:#ff9933 !important; color:#fff !important}
+  }
+  .stat-container{
+    margin-bottom: 80px;
+    width:100%;
+    margin-top: 40px;
+    .study-stat-container{  width:100%;  }
+  }
+}
+
+/***页脚部分***/
+.bottom-navbar{display:none}
+@media all and (max-width: 768px){
+  .bottom-navbar{  display:block !important;  background:#fff;
+      .container-fluid{
+        padding-top:7px;
+        padding-bottom: 7px;
+        a{  color:#ff9933; }
+      }
+  }
+}

@@ -1,234 +1,193 @@
-
-
-
 /***页面头部主体信息**/
-.container{
-    width:90%;
-    margin:25px auto;
-    text-align: center;
-    overflow:hidden; }
-
-.main-bg-flower{
-    position:fixed;
-    bottom:0;
-    left:0;
-    right:0;
-    top:0;  }
-.header{  position:relative;  }
-.nav-bar-box{
-    width:100%;
-    position:relative;  }
-.nav-bar-box:hover{
-    background:rgba(55,55,55,0.3);  }
-.nav-bar{
-    width:80%;
-    margin:20px auto;
-    border-radius:5px;  }
-.nav-bar li{
-    display:inline-block;
-    padding:10px 0;
-    margin-left:4%;
-    width:15%;
-    text-align: center;
-    border-top:5px solid transparent;  }
-.nav-bar li:hover{
-    border-top:5px solid #ff9933;  }
-.nav-bar li a{
-    font-size:20px;
-    color:#fff;  }
-
-/****页面顶部主体信息****/
-.header-info-box{
-    width:80%;
-    margin:0 auto;
-    position: relative;
-    background:rgba(230,230,230,0.5);
-    border-radius:10px;
+html,
+body {
+  background-color: #fff !important;
 }
-.slogan-box{
-    margin:12% 0 2% 0;
+.header {
+  border: 3px solid #fff;
 }
-.my-choice-container{
-    overflow:hidden;
+.header .videoBg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -100;
 }
-.com-slogan{
-    margin:35px auto;
-    font-size:35px;
+.header .nav-bar-box {
+  background: transparent !important;
 }
-.slogan-box:before{
-    display: table;
-    content:"";
+.header .nav-bar-box:hover {
+  background: rgba(255, 255, 255, 0.8) !important;
 }
-.com-my-start{
-    width:150px;
-    border-radius: 15px;
-    border:1px solid #333;
-    padding:6px;
-    margin:15px auto;
-    cursor:pointer;
+.header .header-info-box {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  color: #ff9933;
+  border: 1px solid #aaa;
 }
-
-.com-my-start:hover{
-    background: #ff9933;
+.header .header-info-box .slogan-box {
+  margin: 3% 0 3% 0;
+  border: 1px solid #aaa;
 }
-.com-my-start a{
-    color:#333;
-    padding:6px;
+.header .header-info-box .slogan-box .com-slogan {
+  font-weight: 800;
 }
-.com-my-start a:hover{
-    color:#fff;
+.header .header-info-box .slogan-box:before {
+  display: table;
+  content: "";
 }
-
-a{
-    animation: ctaInAnimation .3s linear forwards;
-    animation-name: ctaInAnimation;
-    animation-duration: 0.3s;
-    animation-timing-function: linear;
-    animation-delay: initial;
-    animation-iteration-count: initial;
-    animation-direction: initial;
-    animation-fill-mode: forwards;
-    animation-play-state: initial;
+.header .header-info-box .my-choice-container {
+  overflow: hidden;
+  border: 1px solid #aaa;
 }
-
-
-.my-choice-level{
-    float:left;
-    width:50%;
-    padding:20px;
-    height:200px;
-    text-align: right;
+.header .header-info-box .my-choice-container a {
+  border: 1px solid #aaa;
+  color: #ff9933 !important;
+  font-weight: 600;
 }
-.my-choice-level>ul>li{
-    padding:6px;  }
-.my-choice-level a{
-    color:#333;
-    font-size:20px;}
-.my-choice-level a:hover{
-    color:#ff9933; }
-.my-choice-test{
-    float:right;
-    padding:20px;
-    width:50%;
-    height:200px;
-    text-align:left;
+.header .header-info-box .my-choice-container .my-choice-level {
+  width: 80%;
+  border: 1px solid #aaa;
 }
-.inner-choice-test{
-    margin:35px 10px;
+.header .header-info-box .my-choice-container .my-choice-level ul > li {
+  padding: 6px;
+  width: 100%;
 }
-.my-choice-test a{
-    color:#333;
-    font-size: 20px}
-.my-choice-test a:hover{
-    color:#ff9933
-
-
-;  }
-
-
-
-/****页面主体信息***/
-.main-box{
-    margin-top:-20%;
-    border-bottom: 2px solid #ddd;
+@media all and (min-width: 992px) {
+  .header-info-box {
+    padding-bottom: 35px;
+    margin-top: 300px;
+  }
+  .header-info-box .com-slogan {
+    margin: 35px auto;
+    font-size: 40px;
+  }
+  .header-info-box .my-choice-container a {
+    font-size: 35px !important;
+  }
+  .header-info-box .my-choice-container .my-choice-level {
+    padding: 20px;
+    height: 200px;
+  }
+  .main-box .inner-container .img-container img {
+    height: 300px;
+  }
+  .main-box .inner-container .inner-info-container {
+    height: 300px;
+  }
 }
-.inner-container{
-    width:70%;
-    margin:0 auto;
+@media all and (max-width: 992px) {
+  .header-info-box {
+    padding-bottom: 25px;
+    margin-top: 150px;
+  }
+  .header-info-box .com-slogan {
+    margin: 25px auto;
+    font-size: 30px;
+  }
+  .header-info-box .my-choice-container a {
+    font-size: 28px !important;
+  }
+  .header-info-box .my-choice-container .my-choice-level {
+    padding: 15px;
+    height: 150px;
+  }
+  .main-box .inner-container .img-container img {
+    height: 280px;
+  }
+  .main-box .inner-container .inner-info-container {
+    height: 280px;
+  }
 }
-.inner-info-container{
-    width:50%;
-    float:left;
-    height:450px;
-    /*border:1px solid #ddd;*/
+@media all and (max-width: 768px) {
+  .header-info-box {
+    padding-bottom: 15px;
+    margin-top: 100px;
+  }
+  .header-info-box .com-slogan {
+    margin: 15px auto;
+    font-size: 20px;
+  }
+  .header-info-box .my-choice-container a {
+    font-size: 15px !important;
+  }
+  .header-info-box .my-choice-container .my-choice-level {
+    padding: 10px;
+    height: 100px;
+  }
+  .main-box .inner-container .img-container img {
+    height: 200px;
+    width: 100%;
+  }
+  .main-box .inner-container .inner-info-container {
+    height: 200px;
+  }
 }
-.img-container{
-    width:50%;
-    float:left;
-    height:350px;
-    /*border:1px solid #ddd;*/
-    text-align:center;
+/*********
+页面顶部主体信息
+*********/
+.main-box {
+  position: relative;
+  z-index: 1;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -300px;
+  border: 1px solid #ddd;
+  border-bottom: 2px solid #ddd;
 }
-.img-container img{
-    width:400px;
+.main-box .inner-container {
+  height: 100%;
 }
-.com-feature-title{
-    margin-top:100px;
+.main-box .inner-container .img-container {
+  border: 1px solid #ddd;
+  background-color: #ff9933;
 }
-.com-feature-info{
-    margin-top:15px;
+.main-box .inner-container .inner-info-container {
+  border: 1px solid #ddd;
+  background: #ffe;
+  overflow: hidden;
+  color: #ff9933;
+  margin: 0 auto;
 }
-
-/*.com-my-start{*/
-    /*margin-top:10px;*/
-    /*cursor:pointer;*/
-    /*background: #ff9933;*/
-/*}*/
-
-
-
-
-
-/***始终将footer固定在底部***/
-footer{
-    /*position:fixed;*/
-    /*bottom:0;*/
-    /*left:70%;*/
+.main-box .inner-container .inner-info-container .com-feature-title {
+  margin-top: 50px;
+  text-align: center;
 }
-
-.footer-navbar li{
-    display:inline-block;
-    width:25%;
+.main-box .inner-container .inner-info-container .com-feature-info {
+  margin-top: 15px;
+  text-align: center;
 }
-.footer-navbar li a{
-    padding:6px 10px;
-    color:#333;
+.main-box .inner-container .inner-info-container .com-my-start {
+  text-align: center;
+  margin: 15px auto;
+  cursor: pointer;
 }
-
-
-/***页面导航 登陆模态框**/
-.modal{
-    position:fixed;
-    left:0;
-    top:0;
-    right:0;
-    bottom:0;
-    background: rgba(51,153,255,0.5);
-    display: none;
+.main-box .inner-container .inner-info-container .com-my-start a {
+  color: #ff9933;
+  padding: 7px 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
 }
-.modal-dialog{
-    width:500px;
-    height:800px; /**????***/
-    margin:200px auto;
+.main-box .inner-container .inner-info-container .com-my-start a:hover {
+  color: #fff;
+  text-decoration: none;
+  background: #ff9933;
 }
-.modal-content{
-    background:#ffe;
-    padding:8px;
-    border-radius:5px;
-    font-size:20px; /**字体大小会影响元素的排列***/
+@media (min-aspect-ratio: 16/9) {
+  .videoBg {
+    width: 100%;
+    height: auto;
+  }
 }
-.modal-content>span{
-    width:80px;
-    text-align:right;
-    border:1px solid #ddd;
-    display: inline-block;
-    height:25px;
-    margin:10px;
-}
-.modal-content .inp{
-    background: #eee;
-    border:1px solid #ff9933;
-    margin:6px;
-    width:150px;
-    height:15px;
-    padding:6px 10px;
-}
-.btnReg,.btnLog{
-    background:#ff9933;
-    width:80px;
-    height:25px;
-    color:#fff;
-    font-size:20px;
-    border-radius: 3px;
-    margin:10px;
+@media (max-aspect-ratio: 16/9) {
+  .videoBg {
+    width: auto;
+    height: 100%;
+  }
 }

@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
  <head>
-  <title> interval</title>
+	 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>程序员单词 | 计算机英语 | Com 背词</title>
   <meta charset="utf-8">
   <meta name="keywprds" content="editplus" />
-  <meta name="description" content=""/>
+	 <meta name="description" content="编程 计算机 单词"/>
 	 <link href="css/nomalize.css" rel="stylesheet">
 	 <link href="css/word.css" rel="stylesheet">
-	 <link href="css/common.css" rel="stylesheet">
-	 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	 <link href="css/header.css" rel="stylesheet">
+	 <link href="css/bootstrap.css" rel="stylesheet">
+	 <link type="image/png" href="img/favicon.ico" rel="icon">
+	 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	 <!--[if lt IE 9]>
+	 <script src="js/html5shiv.min.js"></script>
+	 <script src="js/respond.min.js"></script>
+	 <![endif]-->
  </head>
 	
  <body>
@@ -16,63 +25,111 @@
 		<div class="nav-bar-box" id="nav-bar-box">
 		</div>
 	</header>
-
-	<section class="word-info-box">
-		<div class="container">
-			<h2>Interval  <i class="fa fa-volume-up"></i>
-				<audio class="w-audio" src="resource/interval.mp3" controls id="interval"></audio>
-			</h2>
-
-			<h3>['ɪntərvəl]</h3>
-
-			<ul id="wordMain" class="word">
-				<li><a href="m0">中场休息</a></li>
-				<li><a href="m2">间隔</a> </li>		
-				<li><a href="m1">（数学）区间</a></li>
-				<li><a href="m3">(音乐)音程</a></li>
-			</ul>
-
-			<div class="img-box">
-					<a>
-						<img src="img/img-word/interval0.jpg" alt="m0">
-					</a>
-					<a>
-						<img src="img/img-word/interval2.png" alt="m2">
-					</a>
-					<a>
-						<img src="img/img-word/interval1.gif" alt="m1">
-					</a>
-					<a>
-						<img src="img/img-word/interval3.gif" alt="m3">
-					</a>			
+	<div class="main-container">
+		<section class="word-info-box" >
+			<div class="word-pronoun-box">
+				<div class="word-title text-left">Interval
+				</div>
+				<audio class="word-audio" src="resource/interval.mp3" controls id="word-audio"></audio>
+				<div class="word-pronoun text-left">['ɪntərvəl] <i class="glyphicon glyphicon-volume-up"></i>
+				</div>
 			</div>
-			
-		</div>
-
-		<div class="container">
-			<h4>计算机举例</h4>
-			<div class="cword">
-				众所周知的js里面常用到的两个计时器方法:
-				window.setInterval();
-				window.clearInterval()
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 col-xs-5" >
+						<ul id="wordMain" class="word-mean nav nav-pills">
+							<li role="presentation" class="text-center"><a href="m0" >中场休息</a></li>
+							<li role="presentation" class="text-center"><a href="m2" >间隔</a> </li>
+							<li role="presentation" class="text-center"><a href="m1" >（数学）区间</a></li>
+							<li role="presentation" class="text-center"><a href="m3">(音乐)音程</a></li>
+						</ul>
+					</div>
+					<div class="img-box col-md-12 col-xs-7" >
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row">
+									<div style="background-color: #ff9933" class="col-md-6"><img class="img-responsive img-thumbnail" src="img/img-word/interval0.jpg" alt="m0"></div>
+									<div style="background-color: rgb(227,186,98)" class="col-md-6"><img class="img-responsive img-thumbnail" src="img/img-word/interval2.png" alt="m2"></div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="row">
+									<div style="background-color: rgb(93,122,100)" class="col-md-6"><img class="img-responsive img-thumbnail" src="img/img-word/interval1.gif" alt="m1"></div>
+									<div style="background-color:rgb(241,122,90)" class="col-md-6"><img class="img-responsive img-thumbnail" src="img/img-word/interval3.gif" alt="m3"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			
+			<div class="container">
+				<div class="inner-container text-center">
+					<a class="save" href="#interval">收藏</a>
+					<a class="next" href="#">下一个</a>
+				</div>
+			</div>
+		</section>
+
+	</div>
+
+
+	<nav class="bottom-navbar navbar navbar-fixed-bottom">
+			<div class="container-fluid">
+				<div class="row" >
+					<div class="col-xs-4 text-center"><a class="h3" href="main.html" ><i class="glyphicon glyphicon-home"></i></a></div>
+					<div class="col-xs-4 text-center"><a class="h3" href="save.html"><i class="glyphicon glyphicon-user"></i></a></div>
+					<div class="col-xs-4 text-center"><a class="h3" href="regist.html"><i class="glyphicon glyphicon-list"></i></a></div>
+				</div>
+			</div>
+	</nav>
+
+
+	<div class="modal" id="modalLogin">
+		<div class="modal-dialog">
+			<div class='modal-content'>
+				<div class="modal-inner-content">
+					<h2>你好，欢迎登陆！</h2>
+					<form id="login-form" action="#">
+						<div class="form-group">
+							<label for="username">用户名:</label>
+							<input id="username" name="uname" class="form-control" autofocus placeholder="请输入用户名">
+						</div>
+						<div class="form-group">
+							<label for="password">密码:</label>
+							<input id="password" name="upwd" type="password" class="form-control" placeholder="请输入密码">
+						</div>
+
+						<div class="form-group">
+							<label class="col-md-offset-5 control-label" for="btnLog"></label>
+							<input id="btnLog" type="submit" value="提交" class="btn btn-alert btn-block">
+						</div>
+						<div class="form-group">
+							<label class="col-md-offset-5 control-label" for="btnRegist"></label>
+							<a href="regist.html">注册</a>
+						</div>
+						<div class="form-group">
+							<label class="col-md-offset-5 control-label" for="btnRegist"></label>
+							<a href="regist.html">返回首页</a>
+						</div>
+					</form>
+				</div>
+			</div>
 		</div>
+	</div>
 
-		<div class="container">
-			<button class="save">收藏</button>
-			<button class="next">下一个</button>
-		</div>
-
-
-	</section>
-
-	<footer>
-		<div class="container">
-		</div>
-	</footer>
+	<script>
+		(function () {
+			var s = document.createElement("script");
+			s.onload = function () {
+				bootlint.showLintReportForCurrentDocument([]);
+			};
+			s.src = "js/bootlint.js";
+			document.body.appendChild(s)
+		})();
+	</script>
 	<script src="js/jquery-1.11.3.js"></script>
-	<script src="js/common.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/login.js"></script>
 	<script src="js/word.js"></script>
 
  </body>

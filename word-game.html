@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>word-game</title>
+</head>
+<body>
+<style>
+    #playground{
+        border:1px solid #ddd;
+        background:#ffe
+    }
+    .meaning-box ul li {display: inline-block;list-style: none}
+
+</style>
+
+    <div class="playground-container">
+        <!--<div><img src="img/comword.png" alt="">-->
+            <!--<div class="meaning-box">-->
+            <!--<ul>-->
+                <!--<li>间隔</li>-->
+                <!--<li>区间</li>-->
+                <!--<li>音程</li>-->
+                <!--<li>音程</li>-->
+            <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <canvas id="playground" style="width:100%;height:100%"></canvas>
+    </div>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script>
+    var vocabularyLib=["interval","bubble","proxy","socket","error","capture","license","raw","blame"];
+    var pgCtx=playground.getContext("2d");
+    pgCtx.font="20px serif";
+
+    window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    var y=0,x=10,i=0;
+    function dropDown(){
+        pgCtx.clearRect(0,0,1000,470);
+        (0<y<500)&&(y+=0.5);
+        pgCtx.fillStyle= "#ff9933";
+        pgCtx.fillText(vocabularyLib[i],x,y);
+        pgCtx.fillStyle="#f00";
+        pgCtx.fillText(vocabularyLib[i+1],x+60,y);
+        pgCtx.strokeStyle= "#00f";
+        pgCtx.strokeText(vocabularyLib[i+2],x+120,y);
+        pgCtx.stroketyle="#0f0";
+        pgCtx.strokeText(vocabularyLib[i+3],x+180,y);
+        var t=requestAnimationFrame(dropDown);
+    };
+    dropDown();
+
+        function rc(){
+            var r=parseInt((Math.random()*255+1));
+            var g=parseInt((Math.random()*255+1));
+            var b=parseInt((Math.random()*255+1));
+            return `rgb(${r},${g},${b})`;
+        }
+
+    //    var vocabularyNum=parseInt(Math.random()*9);
+
+
+</script>
+
+<script type="text/javascript" color="0,0,255" opacity='0.7' zIndex="-2" count="99" src="js/test.js"></script>
+</body>
+</html>
