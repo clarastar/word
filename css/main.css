@@ -1,7 +1,7 @@
 /***页面头部主体信息**/
 html,
 body {
-  background-color: #fff !important;
+  background-color: #ffe !important;
 }
 .header {
   border: 3px solid #fff;
@@ -98,10 +98,10 @@ body {
     height: 150px;
   }
   .main-box .inner-container .img-container img {
-    height: 280px;
+    height: 350px;
   }
   .main-box .inner-container .inner-info-container {
-    height: 280px;
+    height: 300px;
   }
 }
 @media all and (max-width: 768px) {
@@ -127,6 +127,16 @@ body {
   .main-box .inner-container .inner-info-container {
     height: 200px;
   }
+  .main-box .inner-container .inner-info-container .com-feature-title {
+    font-size: 23px;
+  }
+  .main-box .inner-container .inner-info-container .com-feature-info {
+    font-size: 18px;
+  }
+  .main-box .inner-container .inner-info-container .com-my-start {
+    padding: 5px 7px;
+    font-size: 22px;
+  }
 }
 /*********
 页面顶部主体信息
@@ -138,18 +148,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: -300px;
-  border: 1px solid #ddd;
-  border-bottom: 2px solid #ddd;
 }
 .main-box .inner-container {
   height: 100%;
 }
 .main-box .inner-container .img-container {
-  border: 1px solid #ddd;
   background-color: #ff9933;
 }
 .main-box .inner-container .inner-info-container {
-  border: 1px solid #ddd;
   background: #ffe;
   overflow: hidden;
   color: #ff9933;
@@ -171,13 +177,11 @@ body {
 .main-box .inner-container .inner-info-container .com-my-start a {
   color: #ff9933;
   padding: 7px 12px;
-  border: 1px solid #ddd;
+  border: 1px solid #ff9933;
   border-radius: 10px;
 }
 .main-box .inner-container .inner-info-container .com-my-start a:hover {
-  color: #fff;
   text-decoration: none;
-  background: #ff9933;
 }
 @media (min-aspect-ratio: 16/9) {
   .videoBg {
@@ -190,4 +194,34 @@ body {
     width: auto;
     height: 100%;
   }
+}
+/********
+页面底部信息
+********/
+footer {
+  background-color: #ffe;
+  width: 100%;
+  margin-top: 40px;
+  border-top: 2px solid #ff9933;
+}
+footer .footer-navbar {
+  padding: 15px;
+  float: right;
+}
+footer .footer-navbar li {
+  display: inline-block;
+}
+footer .footer-navbar li a {
+  padding: 6px 8px;
+  border-radius: 50%;
+  background: #ff9933;
+  color: #fff;
+}
+footer .footer-navbar li a:hover {
+  text-decoration: none;
+  border-radius: 20%;
+  transition: border-radius 1s;
+  -moz-transition: border-radius 1s;
+  -webkit-transition: border-radius 1s;
+  -o-transition: border-radius 1s;
 }
