@@ -17,7 +17,6 @@
 .main-container .word-info-box .word-pronoun-box {
   padding: 7px 0;
   margin: 0 auto;
-  border: 1px solid #ddd;
 }
 .main-container .word-info-box .word-pronoun-box .word-title {
   padding: 3px;
@@ -66,6 +65,18 @@
 .main-container .word-info-box .word-mean li:nth-child(4) {
   background-color: #f17a5a !important;
 }
+.main-container .word-info-box .imgBg1 {
+  background-color: #ff9933;
+}
+.main-container .word-info-box .imgBg2 {
+  background-color: #e3ba62;
+}
+.main-container .word-info-box .imgBg3 {
+  background-color: #5d7a64;
+}
+.main-container .word-info-box .imgBg4 {
+  background-color: #f17a5a;
+}
 .main-container .word-info-box .img-box {
   border-radius: 8px;
   border-top: none;
@@ -87,6 +98,7 @@
 .main-container .word-info-box .save:hover,
 .main-container .word-info-box .next:hover {
   box-shadow: 0 0 8px #ff9933;
+  text-decoration: none;
 }
 /********ҳ�Ų���******/
 .bottom-navbar {
@@ -94,7 +106,8 @@
 }
 @media all and (min-width: 992px) {
   .word-pronoun-box {
-    width: 215px;
+    max-width: 265px;
+    min-width: 215px;
     margin-bottom: 23px;
   }
   .word-pronoun-box .word-pronoun,
@@ -131,7 +144,8 @@
     border: 2px solid #ffcc99;
   }
   .word-pronoun-box {
-    width: 190px;
+    max-width: 240px;
+    min-width: 190px;
     margin-bottom: 18px;
   }
   .word-pronoun-box .word-pronoun,
@@ -172,7 +186,8 @@
     border: 2px solid #ffcc99;
   }
   .word-pronoun-box {
-    width: 165px;
+    min-width: 165px;
+    max-width: 215px;
     margin-bottom: 15px;
   }
   .word-pronoun-box .word-pronoun,
