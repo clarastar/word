@@ -1,144 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>文件上传静态页面</title>
-	<style>
-		*{
-			padding:none;
-			margin:none;
-			list-style: none;
-			color:#333;
-			outline:none;
-			font-size:25px;
-		}
-		h1{
-			width:50%;
-			padding:10px;
-			margin:0 auto;
-			text-align:center;
-		}
-		.container{
-			width:80%;
-			margin:30px auto;
-		}
-		.info-box{
-			background:rgb(242,237,220);
-			padding:30px;
-			border-radius: 5px;
-		}
-		.info-box>li{
-			/*background:rgb(185,191,10);*/
-			background:#ff9933;
-			margin:15px;
-			padding:3px 10px;
-			border-radius:5px;
-		}
-		h2{
-			display:inline-block;
-		}
-		input{
-			width:300px;
-			height:25px;
-			padding:6px 10px;
-			font-size:25px;
-			border-radius: 5px;
-			margin:10px 5px;
-		}
-		.subinfo-box{
-			background:rgb(242,237,220);
-			margin:15px;
-			border-radius:5px;
-		}
-		.subinfo-box>li{
-			display:inline-block;
-		}
-		.add{
-			width:150px;
-			height:35px;
-			font-size:23px;
-			border-radius:5px;
-			padding:5px;
-			background:#fff;
-			color:rgb(25,89,15);
-			border:none;
-			margin:17px;
-			text-align:center;
-		}
-		.info-box>li.sub{
-			text-align:center;
-			background-color:rgb(242,237,220);
-		}
-		[name="wordLevel"]{
-			width:100px;
-		}
-		[type="file"]{
-			/*background:rgb(185,191,10);*/
-			background:#ff9933;
-			border-radius:3px;
-			color:#fff;
-			font-size:18px;
-			border:none;
-		}
-		#subBtn{
-			width:200px;
-			height:50px;
-			padding:5px;
-			font-size:25px;
-			border-radius: 5px;
-			margin:30px;
-			color:#fff;	
-			/*background:rgb(25,89,15);*/
-			background:#ff9933;
-			border:none;	
-		}
-	</style>
+    <meta charset="UTF-8">
+    <title>文件上传静态页面</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            color: #333;
+            outline: none;
+            font-size: 25px;
+        }
+
+        h1 {
+            width: 50%;
+            padding: 10px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        .info-box {
+            background: rgb(242, 237, 220);
+            padding: 30px;
+            border-radius: 5px;
+        }
+
+        .info-box > li {
+            /*background:rgb(185,191,10);*/
+            background: #ff9933;
+            margin: 15px;
+            padding: 3px 10px;
+            border-radius: 5px;
+        }
+
+        h2 {
+            display: inline-block;
+        }
+
+        input {
+            width: 300px;
+            height: 25px;
+            padding: 6px 10px;
+            font-size: 25px;
+            border-radius: 5px;
+            margin: 10px 5px;
+        }
+
+        .subinfo-box {
+            background: rgb(242, 237, 220);
+            margin: 15px;
+            border-radius: 5px;
+        }
+
+        .subinfo-box > li {
+            display: inline-block;
+        }
+
+        .add {
+            width: 150px;
+            height: 35px;
+            font-size: 23px;
+            border-radius: 5px;
+            padding: 5px;
+            background: #fff;
+            color: rgb(25, 89, 15);
+            border: none;
+            margin: 17px;
+            text-align: center;
+        }
+
+        .info-box > li.sub {
+            text-align: center;
+            background-color: rgb(242, 237, 220);
+        }
+
+        [name="wordLevel"] {
+            width: 100px;
+        }
+
+        .file-wrapper {
+            position: relative;
+            display: inline-block;
+            height: 32px;
+            width: 100px;
+            overflow: hidden;
+        }
+
+        .file-holder {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .upload-impl {
+            position: absolute;
+            right: 0;
+            top: 0;
+            /*background:rgb(185,191,10);*/
+            background-color: transparent;
+            color: transparent;
+            box-shadow: 0 0 transparent;
+            font-size: 50px;
+            width: 10000px;
+            margin: 0;
+            padding: 0;
+            height: 10000px;
+        }
+
+        #subBtn {
+            width: 200px;
+            height: 50px;
+            padding: 5px;
+            font-size: 25px;
+            border-radius: 5px;
+            margin: 30px;
+            color: #fff;
+            /*background:rgb(25,89,15);*/
+            background: #ff9933;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-	<div class="container">
-			<h1>Com背词信息上传系统</h1>
-		<form action="clara.php"  id="minfo" method="post" enctype="multipart/form-data">
-			<ul class="info-box">
-				<li><h2>1.单词名称：</h2><input autofocus name="wordName"></li>
-				<li><h2>2.单词发音：</h2>
-					<div id="subInfoContainer0">
-						<ul class="subinfo-box">
-							<li><span>美式音标：</span><input name="wordPhonetic"></li>
-							<li><span>上传发音文件：</span><input name="wordPronoun" type="file"></li>
-						</ul>
-					</div>
-					<div class="add" id="addProBtn">添加英式</div>
+<div class="container">
+    <h1>Com背词信息上传系统</h1>
+    <form action="clara.php" id="minfo" method="post" enctype="multipart/form-data">
+        <ul class="info-box">
+            <li><h2>1.单词名称：</h2><input autofocus name="wordName"></li>
+            <li><h2>2.单词发音：</h2>
+                <div id="subInfoContainer0">
+                    <ul class="subinfo-box">
+                        <li><span>美式音标：</span><input name="wordPhonetic"></li>
+                        <li>
+                            <span>上传发音文件：</span>
+                            <span class="file-uploader">
+                                <span class="file-wrapper">
+								<span class="file-holder">上传文件</span>
+                                <input class="upload-impl" name="wordPronoun" type="file">
+							</span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="add" id="addProBtn">添加英式</div>
 
-				</li>
-				<li><h2>3.单词意思：</h2>
-					<div id="subInfoContainer">
-						<ul class="subinfo-box">
-							<li><span>意思1：</span><input name="wordMean"></li>
-							<li><span>上传图片：</span><input name="wordImg" type="file"></li>
-						</ul>
-					</div>
-					<div class="add add-m" id="addMeanBtn">添加意思</div>
-				</li>
-				<li><h2>4.单词级别：</h2>
-					level1<input name="wordLevel" type="radio" value="level1">
-					level2<input name="wordLevel" type="radio" value="level2">
-					level3<input name="wordLevel" type="radio" value="level3">
-				</li>
+            </li>
+            <li><h2>3.单词意思：</h2>
+                <div id="subInfoContainer">
+                    <ul class="subinfo-box">
+                        <li><span>意思1：</span><input name="wordMean"></li>
+                        <li><span>上传图片：</span><input name="wordImg" type="file"></li>
+                    </ul>
+                </div>
+                <div class="add add-m" id="addMeanBtn">添加意思</div>
+            </li>
+            <li><h2>4.单词级别：</h2>
+                level1<input name="wordLevel" type="radio" value="level1">
+                level2<input name="wordLevel" type="radio" value="level2">
+                level3<input name="wordLevel" type="radio" value="level3">
+            </li>
 
-				<li class="sub"><button id="subBtn">保存提交</button></li>
+            <li class="sub">
+                <button id="subBtn">保存提交</button>
+            </li>
 
-			</ul>
-		</form>
+        </ul>
+    </form>
 
 
-	</div>
+</div>
 
-	<script src="js/jquery-1.11.3.js">
-	</script>
-	<script>
-		$("#addProBtn").click(function(){
-			$("#subInfoContainer0").append(
-					`<ul class="subinfo-box">
+<script src="js/jquery-1.11.3.js">
+</script>
+<script>
+    var c = [];
+    console.log(c instanceof Array);
+    console.log(typeof undefined);
+    var r = /123/;
+    console.log(r instanceof RegExp);
+    console.log(Object.prototype.toString.call(c));
+    console.log(Object.prototype.toString.call(null));
+    $("#addProBtn").click(function () {
+        $("#subInfoContainer0").append(
+                `<ul class="subinfo-box">
 						<li><span>英式音标：</span>
 							<input name="wordPhonetic">
 						</li>
@@ -146,45 +197,45 @@
 							<input name="wordPronoun" type="file"><b class="cancelBtn">&times</b>
 						</li>
 					</ul>`
-				);
-		});
-		var i=1;
-		$("#addMeanBtn").click(function(){
-			i++;
-			$("#subInfoContainer").append(
-						`<ul class="subinfo-box">
+        );
+    });
+    var i = 1;
+    $("#addMeanBtn").click(function () {
+        i++;
+        $("#subInfoContainer").append(
+                `<ul class="subinfo-box">
 							<li><span>意思${i}：</span><input name="wordMean"></li>
 							<li><span>上传图片：</span><input name="wordImg" type="file"><b class="cancelBtn">&times</b></li>
 						</ul>`
-			);
-		});
+        );
+    });
 
-		$(".info-box").on("click",".cancelBtn",
-				function(){
-					$(this).parent().parent().remove();
-				}
-		);
+    $(".info-box").on("click", ".cancelBtn",
+            function () {
+                $(this).parent().parent().remove();
+            }
+    );
 
-		$("#subBtn").click(
-				function(){
-					var fd = new FormData(document.getElementById("minfo"));
-					$.ajax({
-						url:"clara.php",
-						method:"post",
-						data:fd,
-						processData:false,
-						contentType:false,
-						success:function(){
-							console.log("success..");
-							$(this).css({background:"#f00"});
-							$(this).html("保存成功");
-						}
-					});
+    $("#subBtn").click(
+            function () {
+                var fd = new FormData(document.getElementById("minfo"));
+                $.ajax({
+                    url: "clara.php",
+                    method: "post",
+                    data: fd,
+                    processData: false,
+                    contentType: false,
+                    success: function () {
+                        console.log("success..");
+                        $(this).css({background: "#f00"});
+                        $(this).html("保存成功");
+                    }
+                });
 
-				}
-		);
+            }
+    );
 
-	</script>
-	
+</script>
+
 </body>
 </html>
