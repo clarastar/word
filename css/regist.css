@@ -1,53 +1,46 @@
-.main {
+body {
   background-color: #ffe;
+  padding: 0;
 }
-.main .form {
-  border: 1px solid #ddd;
+main {
+  margin-top: 80px;
+  margin-bottom: 80px;
 }
-.main .form .form-group {
-  border: 1px solid #ddd;
+main .content {
+  margin-top: 40px;
+  padding: 20px 0;
+  background: rgba(200, 200, 200, 0.5);
+  overflow: hidden;
 }
-.main .form .form-group .row {
-  border: 1px solid #ddd;
+main .content .row {
+  margin: 5px 30px;
 }
-.main .form .form-group .row .col-md-2 {
-  border: 1px solid #ddd;
-}
-.main .form .form-group .row .col-md-5 {
-  border: 1px solid #ddd;
-}
-.main .content {
-  border: 1px solid #ddd;
-  padding: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  background: rgba(255, 255, 255, 0.8);
-}
-.main .content .control-default,
-.main .content .control-error,
-.main .content .control-success {
+main .control-default,
+main .control-error,
+main .control-success {
   padding-top: 7px;
   padding-bottom: 7px;
   margin-bottom: 0;
   text-align: left;
+  border-radius: 4px;
 }
-.main .content .control-default {
-  background-color: #777;
+main .control-default {
+  background-color: #c8c8c8;
   border-radius: 4px;
   color: #ffffff;
 }
-.main .content .control-error {
-  background-color: #d9534f;
-  color: #ffffff;
-}
-.main .content .control-success {
+main .control-error {
   background-color: #ff9933;
   color: #ffffff;
 }
-.main .content .control-default {
-  background-color: #777;
+main .control-success {
+  background-color: #24ca0c;
   color: #ffffff;
+}
+main [type="submit"] {
+  background-color: #ff9933 !important;
+  border: none;
+}
+main [type="submit"]:hover {
+  background-color: #ff6633 !important;
 }

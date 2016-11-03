@@ -1,6 +1,3 @@
-/*******
-*ҳ������*
-*******/
 .main-container {
   background: #ffe;
   height: 100%;
@@ -12,12 +9,10 @@
 }
 .main-container .word-info-box {
   padding: 15px 0 25px 0;
-  border: 1px solid #ddd;
 }
 .main-container .word-info-box .word-pronoun-box {
   padding: 7px 0;
   margin: 0 auto;
-  border: 1px solid #ddd;
 }
 .main-container .word-info-box .word-pronoun-box .word-title {
   padding: 3px;
@@ -33,7 +28,7 @@
   margin: 0 auto;
   font-weight: bold;
 }
-.main-container .word-info-box .word-pronoun-box .word-pronoun .glyphicon.glyphicon-volume-up {
+.main-container .word-info-box .word-pronoun-box .word-pronoun .glyphicon-volume-up {
   color: #ff9933;
   top: 10px;
   font-size: 35px;
@@ -41,7 +36,6 @@
 .main-container .word-info-box .word-mean {
   margin: 0 auto;
   width: 100%;
-  border: 1px solid #aaa;
 }
 .main-container .word-info-box .word-mean li {
   border: 1px solid #aaa;
@@ -55,7 +49,7 @@
   border-radius: 3px;
 }
 .main-container .word-info-box .word-mean li:nth-child(1) {
-  background-color: #ff9933;
+  background-color: #ff9933 !important;
 }
 .main-container .word-info-box .word-mean li:nth-child(2) {
   background-color: #e3ba62 !important;
@@ -71,6 +65,18 @@
   border-top: none;
   text-align: center;
   margin: 0 auto;
+}
+.main-container .word-info-box .img-box .imgBg1 {
+  background-color: #ff9933;
+}
+.main-container .word-info-box .img-box .imgBg2 {
+  background-color: #e3ba62 !important;
+}
+.main-container .word-info-box .img-box .imgBg3 {
+  background-color: #5d7a64 !important;
+}
+.main-container .word-info-box .img-box .imgBg4 {
+  background-color: #f27a5a !important;
 }
 .main-container .word-info-box .save,
 .main-container .word-info-box .next {
@@ -88,7 +94,6 @@
 .main-container .word-info-box .next:hover {
   box-shadow: 0 0 8px #ff9933;
 }
-/********ҳ�Ų���******/
 .bottom-navbar {
   display: none;
 }
@@ -164,9 +169,6 @@
   }
 }
 @media all and (max-width: 768px) {
-  .img-box {
-    border: 1px solid #ddd;
-  }
   .img-box img {
     height: 150px;
     border: 2px solid #ffcc99;

@@ -1,6 +1,4 @@
-/*******
-*页面主体*
-*******/
+
 .main-container {
   background: #ffe;
   height: 100%;
@@ -11,11 +9,9 @@
   margin-bottom: 50px;
   .word-info-box {
     padding: 15px 0 25px 0;
-    border: 1px solid #ddd;
     .word-pronoun-box {
       padding: 7px 0;
       margin: 0 auto;
-      border: 1px solid #ddd;
       .word-title {
         padding: 3px;
         margin: 0 auto;
@@ -27,21 +23,21 @@
         padding: 3px;
         margin: 0 auto;
         font-weight: bold;
-        .glyphicon.glyphicon-volume-up {
+        .glyphicon-volume-up {
           color: #ff9933;
           top: 10px;
           font-size: 35px;
         }
       }
     }
-    .word-mean {margin: 0 auto; width:100%; border:1px solid #aaa;
+    .word-mean {margin: 0 auto; width:100%;
       li { border:1px solid #aaa;
         display: inline-block;
         border-radius: 5px;
         cursor: pointer;
         a {  color: #fff;  padding: 6px 15px;  border-radius: 3px;  }
       }
-      li:nth-child(1){  background-color:#ff9933; }
+      li:nth-child(1){  background-color:#ff9933 !important; }
       li:nth-child(2){  background-color: rgb(227,186,98)!important;  }
       li:nth-child(3){  background-color: rgb(93,122,100) !important;  }
       li:nth-child(4){  background-color: rgb(241,122,90) !important;  }
@@ -51,6 +47,10 @@
       border-top: none;
       text-align: center;
       margin: 0 auto;
+      .imgBg1{background-color: #ff9933}
+      .imgBg2{background-color: rgb(227,186,98) !important;}
+      .imgBg3{background-color: rgb(93,122,100) !important;}
+      .imgBg4{background-color: rgb(242,122,90) !important;}
     }
     .save, .next {
       height: 50px;
@@ -65,9 +65,7 @@
   }
 }
 
-  /********页脚部分******/
 .bottom-navbar{display:none;  }
-
 @media all and (min-width: 992px){
   .word-pronoun-box{  width:215px;  margin-bottom:23px;
     .word-pronoun,.word-title{  font-size:35px;  }
@@ -118,7 +116,7 @@
 }
 
 @media all and (max-width: 768px) {
-  .img-box {border:1px solid #ddd;
+  .img-box {
     img {  height: 150px;  border: 2px solid #ffcc99;
     }
   }

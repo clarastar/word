@@ -1,60 +1,42 @@
-.main{
-  background-color:#ffe;
-  //background: url("");
-  //.video-frame {
-  //  position: relative;
-  //  width: 100%;
-  //  height: auto;
-  //  margin-top: 40px;
-  //  margin-bottom: 20px;
-  //  video {
-  //    width: 100%;
-  //    height: auto;
-  //    object-fit: contain;
-  //  }
-  //}
-  .form{
-    border:1px solid #ddd;
-    .form-group{border:1px solid #ddd;
-      .row{border:1px solid #ddd;
-        .col-md-2{border:1px solid #ddd;}
-        .col-md-5{border:1px solid #ddd;}
-      }
-    }
-  }
+body{background-color: #ffe;padding:0}
+main{margin-top:80px;margin-bottom:80px;
   .content {
-    border:1px solid #ddd;
-    padding:20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    background:rgba(255,255,255,0.8);
-    .control-default, .control-error, .control-success{
-      padding-top: 7px;
-      padding-bottom: 7px;
-      margin-bottom: 0;
-      text-align: left;
-    }
-    .control-default {
-      background-color: #777;
-      border-radius: 4px;
-      color: #ffffff;
-    }
-    .control-error {
-      background-color: #d9534f;
-      color: #ffffff;
-    }
-    .control-success {
-      background-color: #ff9933;
-      color: #ffffff;
-    }
-    .control-default {
-      background-color: #777;
-      color: #ffffff;
-    }
+    margin-top:40px;
+    padding:20px 0;
+    background:rgba(200,200,200,0.5);
+    overflow:hidden;
   }
+  .content .row{margin:5px 30px;}
+  .control-default, .control-error, .control-success{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    margin-bottom: 0;
+    text-align: left;
+    border-radius: 4px;
+  }
+  .control-default {
+    background-color: rgb(200,200,200);
+    border-radius: 4px;
+    color: #ffffff;
+  }
+  .control-error {
+    background-color: #ff9933;
+    color: #ffffff;
+  }
+  .control-success {
+    background-color:rgb(36,202,12);
+    color: #ffffff;
+  }
+
+
+  [type="submit"]{
+    background-color: #ff9933 !important;
+    border:none;
+  }
+  [type="submit"]:hover{
+    background-color: #ff6633 !important;
+  }
+
 }
 
 

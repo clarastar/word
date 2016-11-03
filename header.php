@@ -4,7 +4,7 @@ header('Content-Type: text/html;charset=UTF-8');
 <div class="navbar" >
 				<div class="container">
 					<div class="navbar-header">
-						<a class="navbar-brand" href="main.html">
+						<a class="navbar-brand" href="index.html">
 							<img src="img/comword-no-bg.png" >
 						</a>
 						<a class="navbar-toggle icon-bar-box" id="icon-bar-box" data-toggle="collapse" href="#menu">

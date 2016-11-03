@@ -20,9 +20,20 @@ $('#wordMain').on('click','a',function(e){
 
 
 /*** 页面发音****/
+
+//发现单词的发音是间隔响的???
 $('.glyphicon-volume-up').click(function(){
-	$("#word-audio").play();
+	$("#word-audio")[0].play();
 });
+
+
+// window.onload=function(){
+// 	$("#word-audio")[0].play();
+// }
+
+// document.ready=function(){
+// 	$("#word-audio")[0].play();
+// }
 
 
 
@@ -37,14 +48,11 @@ $('.img-box').on('mouseout','img',function(){
 		var m=$(this).attr('alt');
 		$(this).css({borderWidth:'1px'});
 		$(`#wordMain [href=${m}]`).css({transform:"scale(1,1)"});
-		//$(`#wordMain [href=${m}]`).css({background:'#ff9933',color:'#fff'});
 });
 
 if (window.matchMedia("(max-width: 768px)").matches) {
 	$("#wordMain").addClass("nav-stacked");
 	$(".img-container").addClass("align-left");
-	//$(".h2").addClass("small");
-	//$(".h3").addClass("small");
 }
 
 $(".save").click(function(e){
@@ -55,13 +63,10 @@ $(".save").click(function(e){
 	this.press=true;
 	var word=$(this).attr("href");
 	$.post("url",word,function(obj){
-		console.log(arguments);
 		if(obj.code===0){ //验证成功
 			$(this).css({backgroundColor:"#ddd"});
 			$(this).html("已收藏");
 			console.log("保存成功");
-		}else {
-
 		}
 	});
 });
