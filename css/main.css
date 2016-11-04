@@ -18,8 +18,8 @@ body {
   left: 0;
   position: absolute;
   width: 100%;
-  height: 1000px;
-  background-image: url("../img/imgBg.png");
+  min-height: 1000px;
+  background-image: url("../img/imgBg.jpg");
   background-size: cover;
 }
 .header .bgWrapper .nav-bar-box {
@@ -213,32 +213,5 @@ body {
   }
 }
 /********
-页面底部信息
+页面底部样式由于内容较少,写在header里面
 ********/
-footer {
-  background-color: #ffe;
-  width: 100%;
-  margin-top: 40px;
-  border-top: 2px solid #ff9933;
-}
-footer .footer-navbar {
-  padding: 15px;
-  float: right;
-}
-footer .footer-navbar li {
-  display: inline-block;
-}
-footer .footer-navbar li a {
-  padding: 6px 8px;
-  border-radius: 50%;
-  background: #ff9933;
-  color: #fff;
-}
-footer .footer-navbar li a:hover {
-  text-decoration: none;
-  border-radius: 20%;
-  transition: border-radius 1s;
-  -moz-transition: border-radius 1s;
-  -webkit-transition: border-radius 1s;
-  -o-transition: border-radius 1s;
-}

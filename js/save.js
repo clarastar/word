@@ -52,7 +52,6 @@ $(".save-box").on("click",".cancelBtn",
 );
 
 
-
 function drawStudyStatWeek(){
     var width=parseFloat($("#study-stat-container").innerWidth());
     $.getJSON('data/3_save_stat_week.php', function(responseData){

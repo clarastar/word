@@ -65,9 +65,6 @@ html,body{
 }
 
 
-
-
-
 .modal-content{background-color:#ffe !important;}
 .modal-inner-content {
   width: 300px;
@@ -82,4 +79,17 @@ html,body{
   background-color: #ff6633 !important;
   outline:none;
   color:#fff;
+}
+
+
+/***底部导航的样式***/
+.bottom-navbar{display:none;background:#fff !important;}
+@media all and (max-width: 768px){
+  .bottom-navbar{ display:block !important;
+    .container-fluid{
+      padding-top:7px;
+      padding-bottom: 7px;
+      a{  color:#ff9933; }
+    }
+  }
 }

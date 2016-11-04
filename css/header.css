@@ -83,3 +83,20 @@ body .header .nav-bar-box #menu .navbar-nav li a:hover {
   outline: none;
   color: #fff;
 }
+/***底部导航的样式***/
+.bottom-navbar {
+  display: none;
+  background: #fff !important;
+}
+@media all and (max-width: 768px) {
+  .bottom-navbar {
+    display: block !important;
+  }
+  .bottom-navbar .container-fluid {
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  .bottom-navbar .container-fluid a {
+    color: #ff9933;
+  }
+}
