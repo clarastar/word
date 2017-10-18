@@ -1,3 +1,5 @@
+
+预览地址：http://htmlpreview.github.io/?https://github.com/clarastar/word/blob/master/index.html
 # word
 
 An application designed to help Chinese programmers learn computer vocabulary.
